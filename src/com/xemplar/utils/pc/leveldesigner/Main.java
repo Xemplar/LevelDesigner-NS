@@ -198,6 +198,7 @@ public class Main extends JFrame implements ActionListener{
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane_1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane_1.getVerticalScrollBar().setUnitIncrement(16);
 		scrollPane_1.setPreferredSize(new Dimension(((48 + 5) * 4) + 20, 0));
 		scrollPane_1.setMinimumSize(new Dimension(((48 + 5) * 4) + 20, 0));
 		

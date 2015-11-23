@@ -13,6 +13,8 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 
+import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
+
 public class TileButton extends JButton{
 	private static final long serialVersionUID = -6168609316617502199L;
 	public static final Map<String, String> ALL= new HashMap<String, String>();
@@ -44,6 +46,10 @@ public class TileButton extends JButton{
 				String[] com = current.split(":");
 				if(com[0].equalsIgnoreCase("group")){
 					groups.add(new TileGroup(com[1]));
+				} else if(com[0].equalsIgnoreCase("entity")){
+					int id = Integer.parseInt(com[4]);
+					String[] args = com[2].split("/");
+					InsertEntityDialog.creators.add(new EntityCreator(com[1], id, com[3], args));
 				} else if(com[0].equalsIgnoreCase("all")){
 					for(TileGroup g : groups){
 						g.put(com[2], com[1]);

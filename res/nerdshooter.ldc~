@@ -105,15 +105,3 @@ All:lock_yellow.png:ly
 All:lock_red.png:lr
 All:CheckPoint.png:ch
 All:gun.png:gun
-All:spikesUp.png:spu
-All:spikesDown.png:spd
-All:spikesLeft.png:spl
-All:spikesRight.png:spr
-All:stoneSpikesUp.png:sspu
-All:stoneSpikesDown.png:sspd
-All:stoneSpikesLeft.png:sspl
-All:stoneSpikesRight.png:sspr
-All:sandSpikesUp.png:nspu
-All:sandSpikesDown.png:nspd
-All:sandSpikesLeft.png:nspl
-All:sandSpikesRight.png:nspr

@@ -91,7 +91,7 @@ public class NewFileDialog extends JDialog implements ActionListener{
 			Object[] ret = {this.width.getValue(), this.height.getValue()};
 			listener.dialogFinished(ret);
 		} else {
-			listener.dialogFinished(new Object[]{"cancled"});
+			listener.dialogFinished("cancled");
 		}
 		
 		this.setVisible(false);

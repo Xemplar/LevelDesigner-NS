@@ -10,6 +10,8 @@ import java.awt.event.MouseMotionListener;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
+
 public class Drawspace extends JPanel implements MouseListener, MouseMotionListener{
 	private static final long serialVersionUID = 831560106889837755L;
 	
@@ -91,8 +93,20 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 		
 		for(int x = 0; x < width; x++){
 			for(int y = 0; y < height; y++){
-				if(ids[x + y * width] != "00"){
-					g.drawImage(TileButton.IMAGES.get(ids[x + y * width]), x * SIZE, y * SIZE, SIZE, SIZE, null);
+				String current = ids[x + y * width];
+				if(current != "00"){
+					if(current.startsWith("e") && !current.equals("ext")){
+						int id = Integer.parseInt(current.charAt(1) + "" + current.charAt(2));
+						for(EntityCreator create : InsertEntityDialog.creators){
+							if(create.getID() == id){
+								g.drawImage(create.getImage(), x * SIZE, y * SIZE, SIZE, SIZE, null);
+								break;
+							}
+						}
+						
+					} else {
+						g.drawImage(TileButton.IMAGES.get(current), x * SIZE, y * SIZE, SIZE, SIZE, null);
+					}
 				}
 			}
 		}
@@ -116,9 +130,17 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 		int mouseY = e.getY() / SIZE;
 		
 		if(e.getButton() == MouseEvent.BUTTON1){
-			ids[mouseX + mouseY * width] = Main.CURRENT_ID;
+			if(Main.hasEntity){
+				ids[mouseX + mouseY * width] = Main.entity;
+			} else {
+				ids[mouseX + mouseY * width] = Main.CURRENT_ID;
+			}
 		} else {
-			ids[mouseX + mouseY * width] = "00";
+			if(Main.hasEntity){
+				Main.hasEntity = false;
+			} else {
+				ids[mouseX + mouseY * width] = "00";
+			}
 		}
 		repaint();
 	}

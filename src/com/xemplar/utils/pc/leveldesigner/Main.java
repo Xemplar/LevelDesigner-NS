@@ -33,6 +33,7 @@ import javax.swing.border.EmptyBorder;
 
 import com.xemplar.utils.pc.leveldesigner.TileButton.TileGroup;
 import com.xemplar.utils.pc.leveldesigner.dialogs.DialogFinishedListener;
+import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
 import com.xemplar.utils.pc.leveldesigner.dialogs.NewFileDialog;
 
 public class Main extends JFrame implements ActionListener{
@@ -43,6 +44,8 @@ public class Main extends JFrame implements ActionListener{
 	public static String CURRENT_ID = "";
 	public String FILE_NAME = "";
 	
+	public static boolean hasEntity = false;
+	public static String entity = "";
 	public static int MAX_INDEX = 0;
 	public static int CURRENT_SET = 0;
 	
@@ -105,8 +108,10 @@ public class Main extends JFrame implements ActionListener{
 			public void actionPerformed(ActionEvent e) {
 				NewFileDialog dialog = new NewFileDialog();
 				dialog.setDialogedFinishListener(new DialogFinishedListener(){
-					public void dialogFinished(Object[] args) {
-						if(args[0].equals("cancled")) return;
+					public void dialogFinished(Object arg) {
+						if(arg.equals("cancled")) return;
+						
+						Object[] args = (Object[]) arg;
 						
 						int width = (int)args[0];
 						int height = (int)args[1];
@@ -182,6 +187,25 @@ public class Main extends JFrame implements ActionListener{
 		
 		JMenuItem mntmDelete = new JMenuItem("Delete");
 		mnEdit.add(mntmDelete);
+		
+		JMenu mnInsert = new JMenu("Insert");
+		menuBar.add(mnInsert);
+		
+		JMenuItem mntmEntity = new JMenuItem("Entity");
+		mnInsert.add(mntmEntity);
+		mntmEntity.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				InsertEntityDialog dialog = new InsertEntityDialog();
+				dialog.setDialogedFinishListener(new DialogFinishedListener(){
+					public void dialogFinished(Object arg) {
+						if(arg.equals("cancled")) return;
+						
+						hasEntity = true;
+						entity = (String) arg;
+					}
+				});
+			}
+		});
 		
 		
 		

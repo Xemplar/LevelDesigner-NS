@@ -79,6 +79,8 @@ public class NewFileDialog extends JDialog implements ActionListener{
 		buttonPane.add(cancelButton);
 
 		setVisible(true);
+		toFront();
+		requestFocus();
 	}
 
 	public void setDialogedFinishListener(DialogFinishedListener listener){

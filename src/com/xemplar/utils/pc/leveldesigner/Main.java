@@ -69,7 +69,7 @@ public class Main extends JFrame implements ActionListener{
 				try {
 					instance = new Main();
 					instance.setVisible(true);
-					instance.setTitle("Level Designer");
+					instance.setTitle("New File");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -94,7 +94,7 @@ public class Main extends JFrame implements ActionListener{
 	 */
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 480);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -120,6 +120,7 @@ public class Main extends JFrame implements ActionListener{
 						HAS_BEEN_SAVED = false;
 					}
 				});
+				setTitle("New Level");
 			}
 		});
 		
@@ -128,6 +129,9 @@ public class Main extends JFrame implements ActionListener{
 		mntmOpen.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				field.loadLevel(openFile());
+				if(!FILE_NAME.equals("")){
+					setTitle(FILE_NAME);
+				}
 			}
 		});
 		
@@ -145,6 +149,9 @@ public class Main extends JFrame implements ActionListener{
 				} else {
 					saveFile();
 				}
+				if(!FILE_NAME.equals("")){
+					setTitle(FILE_NAME);
+				}
 			}
 		});
 		
@@ -153,6 +160,9 @@ public class Main extends JFrame implements ActionListener{
 		mntmExport.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				save("/home/roxas/levelExp.txt");
+				if(!FILE_NAME.equals("")){
+					setTitle(FILE_NAME);
+				}
 			}
 		});
 		
@@ -161,6 +171,9 @@ public class Main extends JFrame implements ActionListener{
 		mntmSaveAs.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				saveFile();
+				if(!FILE_NAME.equals("")){
+					setTitle(FILE_NAME);
+				}
 			}
 		});
 		
@@ -302,6 +315,9 @@ public class Main extends JFrame implements ActionListener{
 	
 	public void saveFile(){
 		FileDialog dialog = new FileDialog(this, "Open Nerd Shooter Level", FileDialog.SAVE);
+		if(!FILE_NAME.equals("")){
+			dialog.setFile(FILE_NAME);
+		}
 		dialog.setFilenameFilter(new FilenameFilter(){
 			public boolean accept(File dir, String name) {
 				String extension = "";
@@ -322,6 +338,8 @@ public class Main extends JFrame implements ActionListener{
 		});
 		
 		dialog.setVisible(true);
+		dialog.toFront();
+		dialog.requestFocus();
 		FILE_NAME = dialog.getDirectory() + dialog.getFile();
 		save(FILE_NAME);
 
@@ -330,6 +348,9 @@ public class Main extends JFrame implements ActionListener{
 	
 	public String[] openFile(){
 		FileDialog dialog = new FileDialog(this, "Open Nerd Shooter Level", FileDialog.LOAD);
+		if(!FILE_NAME.equals("")){
+			dialog.setFile(FILE_NAME);
+		}
 		dialog.setFilenameFilter(new FilenameFilter(){
 			public boolean accept(File dir, String name) {
 				String extension = "";
@@ -350,6 +371,8 @@ public class Main extends JFrame implements ActionListener{
 		});
 		
 		dialog.setVisible(true);
+		dialog.toFront();
+		dialog.requestFocus();
 		FILE_NAME = dialog.getDirectory() + dialog.getFile();
 		System.out.println(FILE_NAME);
 		File f = new File(FILE_NAME);
@@ -390,5 +413,9 @@ public class Main extends JFrame implements ActionListener{
 			((TileButton)button).setSelected(false);
 		}
 		((TileButton)e.getSource()).setSelected(true);
+	}
+	
+	public void setTitle(String title){
+		super.setTitle("Level Designer - " + title);
 	}
 }

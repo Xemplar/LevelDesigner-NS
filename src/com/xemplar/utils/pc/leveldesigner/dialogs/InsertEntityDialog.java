@@ -138,7 +138,9 @@ public class InsertEntityDialog extends JDialog implements ActionListener, ListS
 			}
 		}
 		
-		this.setVisible(true);
+		setVisible(true);
+		toFront();
+		requestFocus();
 	}
 	
 	public void setDialogedFinishListener(DialogFinishedListener listener){

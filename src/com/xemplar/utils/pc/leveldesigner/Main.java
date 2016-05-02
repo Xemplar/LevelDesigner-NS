@@ -34,6 +34,7 @@ import javax.swing.border.EmptyBorder;
 import com.xemplar.utils.pc.leveldesigner.TileButton.TileGroup;
 import com.xemplar.utils.pc.leveldesigner.dialogs.DialogFinishedListener;
 import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
+import com.xemplar.utils.pc.leveldesigner.dialogs.InsertMovableDialog;
 import com.xemplar.utils.pc.leveldesigner.dialogs.NewFileDialog;
 
 public class Main extends JFrame implements ActionListener{
@@ -219,8 +220,22 @@ public class Main extends JFrame implements ActionListener{
 				});
 			}
 		});
-		
-		
+
+		JMenuItem mntmMovable = new JMenuItem("Movable");
+		mnInsert.add(mntmMovable);
+		mntmEntity.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				InsertMovableDialog dialog = new InsertMovableDialog();
+				dialog.setDialogedFinishListener(new DialogFinishedListener(){
+					public void dialogFinished(Object arg) {
+						if(arg.equals("cancled")) return;
+
+						hasEntity = true;
+						entity = (String) arg;
+					}
+				});
+			}
+		});
 		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b6baaa-853b-4162-888d-f8ae6b1cb683" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertMovableDialog.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace$1.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java" />
     </list>
     <ignored path="LevelDesigner-NS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +28,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
+            <state relative-caret-position="2160">
               <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
               <folding>
                 <element signature="e#5055#5056#0" expanded="true" />
@@ -48,7 +41,7 @@
       <file leaf-file-name="JContextMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495">
+            <state relative-caret-position="345">
               <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,12 +55,9 @@
       <file leaf-file-name="Drawspace.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="103">
               <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
-              <folding>
-                <element signature="e#3130#3131#0" expanded="true" />
-                <element signature="e#3162#3163#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,9 +72,14 @@
       <file leaf-file-name="AnimateBlock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="343">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#1508#1509#0" expanded="true" />
+                <element signature="e#1533#1534#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +87,7 @@
       <file leaf-file-name="InsertEntityDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
+            <state relative-caret-position="60">
               <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding />
             </state>
@@ -129,13 +124,43 @@
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-18" />
-    <option name="width" value="1366" />
-    <option name="height" value="783" />
+    <option name="x" value="-3" />
+    <option name="y" value="31" />
+    <option name="width" value="1372" />
+    <option name="height" value="740" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>UI Form Problems</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>MissingMnemonic</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -162,7 +187,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,37 +247,9 @@
               <option name="myItemId" value="dialogs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnimateBlock" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="leveldesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dialogs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,12 +494,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-18" width="1366" height="783" extended-state="6" />
+    <frame x="-3" y="31" width="1372" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -511,7 +509,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24231333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -520,8 +518,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -547,6 +546,66 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
+          <folding>
+            <element signature="e#5055#5056#0" expanded="true" />
+            <element signature="e#5101#5102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3465">
           <caret line="231" column="0" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
           <folding>
@@ -556,14 +615,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertMovableDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertMovableDialog.java" />
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2550">
@@ -588,7 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="2160">
           <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
           <folding>
             <element signature="e#5055#5056#0" expanded="true" />
@@ -599,7 +651,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
+        <state relative-caret-position="345">
           <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -609,29 +661,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertMovableDialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
-          <folding>
-            <element signature="e#3130#3131#0" expanded="true" />
-            <element signature="e#3162#3163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertMovableDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state relative-caret-position="60">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="103">
+          <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -640,12 +682,23 @@
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="343">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

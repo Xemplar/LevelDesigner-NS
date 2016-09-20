@@ -3,10 +3,13 @@ package com.xemplar.utils.pc.leveldesigner.dialogs;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class AnimateBlock extends JDialog {
+public class AnimateBlock extends JDialog implements ActionListener{
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JCheckBox horizontalCheckBox;
+    private JSpinner spinner1;
+    private JSpinner spinner2;
 
     public AnimateBlock() {
         setContentPane(contentPane);
@@ -41,8 +44,11 @@ public class AnimateBlock extends JDialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
+    public void actionPerformed(ActionEvent e){
+
+    }
+
     private void onOK() {
-        // add your code here
         dispose();
     }
 

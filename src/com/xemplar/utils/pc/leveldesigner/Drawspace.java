@@ -3,21 +3,21 @@ package com.xemplar.utils.pc.leveldesigner;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
+import com.xemplar.utils.pc.leveldesigner.dialogs.JContextMenu;
 
-public class Drawspace extends JPanel implements MouseListener, MouseMotionListener{
+public class Drawspace extends JPanel implements MouseListener, MouseMotionListener, ActionListener{
 	private static final long serialVersionUID = 831560106889837755L;
 	
 	public static final int SIZE = 48;
 	
 	private int width, height;
+	private JContextMenu menu;
 	private String[] ids;
 	
 	public Drawspace(int width, int height){
@@ -26,6 +26,8 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 		this.setAutoscrolls(true);
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
+
+		menu = new JContextMenu(this);
 	}
 	
 	public void resizeField(int width, int height){
@@ -124,7 +126,11 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 		
 		return out;
 	}
-	
+
+	public String getIdAt(int x, int y){
+		return ids[x + y * width];
+	}
+
 	public void mouseClicked(MouseEvent e) {
 		int mouseX = e.getX() / SIZE;
 		int mouseY = e.getY() / SIZE;
@@ -136,14 +142,35 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 				ids[mouseX + mouseY * width] = Main.CURRENT_ID;
 			}
 		} else {
-			if(Main.hasEntity){
-				Main.hasEntity = false;
-			} else {
-				ids[mouseX + mouseY * width] = "00";
-			}
+		    if(Main.hasEntity){
+
+            } else {
+                menu.show(this, e.getX(), e.getY(), mouseX, mouseY);
+            }
 		}
 		repaint();
 	}
+
+	public void actionPerformed(ActionEvent e){
+		String[] dat = e.getActionCommand().split(":");
+        String action = dat[0];
+        int tx = Integer.parseInt(dat[1]);
+        int ty = Integer.parseInt(dat[2]);
+        String id = getIdAt(tx, ty);
+
+        if(action.equals("uan")){        // Un Animate
+            String[] op = id.split("#");
+            ids[tx + ty * width] = op[1];
+        } else if(action.equals("ani")){ // Animate
+
+        } else if(action.equals("rep")){ // Replace
+
+        } else if(action.equals("del")){ // Delete
+
+        } else if(action.equals("edi")){ // Edit Entity
+
+        }
+    }
 
 	public void mouseMoved(MouseEvent e) {
 		int mouseX = e.getX() / SIZE;

@@ -39,7 +39,7 @@ import com.xemplar.utils.pc.leveldesigner.dialogs.NewFileDialog;
 
 public class Main extends JFrame implements ActionListener{
 	private static final long serialVersionUID = -2895410634768339711L;
-	private static Main instance;
+	public static Main instance;
 
 	public boolean HAS_BEEN_SAVED = false;
 	public static String CURRENT_ID = "";
@@ -177,7 +177,18 @@ public class Main extends JFrame implements ActionListener{
 				}
 			}
 		});
-		
+
+        JSeparator sep1 = new JSeparator();
+        mnFile.add(sep1);
+
+        JMenuItem mntmExit = new JMenuItem("Exit");
+        mnFile.add(mntmExit);
+        mntmExit.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
 		JMenu mnEdit = new JMenu("Edit");
 		menuBar.add(mnEdit);
 		

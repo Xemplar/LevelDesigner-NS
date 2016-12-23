@@ -1,17 +1,17 @@
 package com.xemplar.utils.pc.leveldesigner;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.*;
+import java.util.Map;
 
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
+import com.xemplar.utils.pc.leveldesigner.dialogs.AnimateBlock;
+import com.xemplar.utils.pc.leveldesigner.dialogs.DialogFinishedListener;
 import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
 import com.xemplar.utils.pc.leveldesigner.dialogs.JContextMenu;
 
-public class Drawspace extends JPanel implements MouseListener, MouseMotionListener, ActionListener{
+public class Drawspace extends JPanel implements MouseListener, MouseMotionListener, ActionListener, MouseWheelListener{
 	private static final long serialVersionUID = 831560106889837755L;
 	
 	public static final int SIZE = 48;
@@ -19,17 +19,29 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 	private int width, height;
 	private JContextMenu menu;
 	private String[] ids;
+	private float scale = 1F;
 	
 	public Drawspace(int width, int height){
 		resizeField(width, height);
 
 		this.setAutoscrolls(true);
+		this.setFocusable(true);
+
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
+		this.addMouseWheelListener(this);
 
 		menu = new JContextMenu(this);
 	}
-	
+
+    public void setScale(float amt){
+        this.scale = amt;
+    }
+
+    public float getScale(){
+        return this.scale;
+    }
+
 	public void resizeField(int width, int height){
 		this.width = width;
 		this.height = height;
@@ -80,6 +92,14 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 	}
 	
 	public void paint(Graphics g){
+        Graphics2D g2 = (Graphics2D) g;
+        int w = this.width * SIZE;
+        int h = this.width * SIZE;
+
+        g2.translate(w/2, h/2);
+        g2.scale(scale, scale);
+        g2.translate(-w/2, -h/2);
+
 		g.setColor(new Color(0x000000));
 		g.fillRect(0, 0, getWidth(), getHeight());
 		
@@ -97,7 +117,10 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 			for(int y = 0; y < height; y++){
 				String current = ids[x + y * width];
 				if(current != "00"){
-					if(current.startsWith("e") && !current.equals("ext")){
+				    if(current.startsWith("e03")) {
+                        String[] params = current.split("#");
+                        g.drawImage(TileButton.IMAGES.get(params[1]), x * SIZE, y * SIZE, SIZE, SIZE, null);
+                    } else if(current.startsWith("e") && !current.equals("ext")){
 						int id = Integer.parseInt(current.charAt(1) + "" + current.charAt(2));
 						for(EntityCreator create : InsertEntityDialog.creators){
 							if(create.getID() == id){
@@ -132,8 +155,8 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		int mouseX = e.getX() / SIZE;
-		int mouseY = e.getY() / SIZE;
+        int mouseX = (int)(e.getX() / scale) / SIZE;
+        int mouseY = (int)(e.getY() / scale) / SIZE;
 		
 		if(e.getButton() == MouseEvent.BUTTON1){
 			if(Main.hasEntity){
@@ -162,27 +185,80 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
             String[] op = id.split("#");
             ids[tx + ty * width] = op[1];
         } else if(action.equals("ani")){ // Animate
+			AnimateBlock dialog = new AnimateBlock(new DialogFinishedListener(){
+				public void dialogFinished(Object arg) {
+					if(arg == null) return;
+					Map<String, Object> map = (Map<String, Object>)arg;
+					int x = (int)map.get("x");
+					int y = (int)map.get("y");
+					int dir = map.get("dir").equals(true) ? 1 : 0;
+                    ids[x + y * width] = "e03#" + map.get("id") + "#" + dir + "#" + map.get("dist") + "#" + map.get("sped");
+				}
+			}, id, tx, ty);
+            dialog.setVisible(true);
 
+            for(int i = 0; i < ids.length; i++){
+                if(i % width == 0){
+                    System.out.println();
+                }
+                System.out.print(ids[i] + " ");
+            }
         } else if(action.equals("rep")){ // Replace
 
         } else if(action.equals("del")){ // Delete
-
+            ids[tx + ty * width] = "00";
         } else if(action.equals("edi")){ // Edit Entity
 
         }
+        repaint();
     }
 
-	public void mouseMoved(MouseEvent e) {
-		int mouseX = e.getX() / SIZE;
-		int mouseY = e.getY() / SIZE;
+    public Dimension getPreferredSize() {
+        return new Dimension((int)(scale * SIZE * width), (int)(scale * SIZE * height));
+    }
+
+    public void mouseMoved(MouseEvent e) {
+        int mouseX = (int)(e.getX() / scale) / SIZE;
+        int mouseY = (int)(e.getY() / scale) / SIZE;
 		
 		Main.setCoords(mouseX, mouseY);
 	}
-	
-	
-	public void mousePressed(MouseEvent e) { }
+
+    public void mouseWheelMoved(MouseWheelEvent e) {
+        int b1 = MouseWheelEvent.CTRL_DOWN_MASK;
+        if ((e.getModifiersEx() & (b1)) != b1) return;
+        switch (e.getWheelRotation()) {
+            case -1:
+                Main.zoomIn(this, e.getLocationOnScreen());
+                break;
+            case 1:
+                Main.zoomOut(this, e.getLocationOnScreen());
+                break;
+        }
+
+        this.repaint();
+    }
+
+    public void mousePressed(MouseEvent e) { }
 	public void mouseReleased(MouseEvent e) { }
 	public void mouseEntered(MouseEvent e) { }
 	public void mouseExited(MouseEvent e) { }
-	public void mouseDragged(MouseEvent e) { }
+	public void mouseDragged(MouseEvent e) {
+        int mouseX = (int)(e.getX() / scale) / SIZE;
+        int mouseY = (int)(e.getY() / scale) / SIZE;
+
+        int b1 = MouseEvent.BUTTON1_DOWN_MASK;
+        int b2 = MouseEvent.BUTTON2_DOWN_MASK;
+        if ((e.getModifiersEx() & (b1 | b2)) == b1) {
+            if(Main.hasEntity){
+                ids[mouseX + mouseY * width] = Main.entity;
+            } else {
+                ids[mouseX + mouseY * width] = Main.CURRENT_ID;
+
+            }
+        } else if ((e.getModifiersEx() & (b1 | b2)) == b2) {
+            ids[mouseX + mouseY * width] = "00";
+        }
+        repaint();
+    }
 }

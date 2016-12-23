@@ -1,11 +1,6 @@
 package com.xemplar.utils.pc.leveldesigner;
 
-import java.awt.Dimension;
-import java.awt.EventQueue;
-import java.awt.FileDialog;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -34,7 +29,6 @@ import javax.swing.border.EmptyBorder;
 import com.xemplar.utils.pc.leveldesigner.TileButton.TileGroup;
 import com.xemplar.utils.pc.leveldesigner.dialogs.DialogFinishedListener;
 import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
-import com.xemplar.utils.pc.leveldesigner.dialogs.InsertMovableDialog;
 import com.xemplar.utils.pc.leveldesigner.dialogs.NewFileDialog;
 
 public class Main extends JFrame implements ActionListener{
@@ -52,7 +46,7 @@ public class Main extends JFrame implements ActionListener{
 	
 	private ArrayList<ArrayList<JButton>> buttons = new ArrayList<ArrayList<JButton>>();
 	private JPanel contentPane, buttonContainer;
-	private JScrollPane scrollPane;
+	private static JScrollPane scrollPane;
 	private JStatusBar status;
 	public Drawspace field;
 
@@ -198,8 +192,8 @@ public class Main extends JFrame implements ActionListener{
 		JMenuItem mntmRedo = new JMenuItem("Redo");
 		mnEdit.add(mntmRedo);
 		
-		JSeparator sep1 = new JSeparator();
-		mnEdit.add(sep1);
+		JSeparator sep2 = new JSeparator();
+		mnEdit.add(sep2);
 		
 		JMenuItem mntmCut = new JMenuItem("Cut");
 		mnEdit.add(mntmCut);
@@ -236,15 +230,6 @@ public class Main extends JFrame implements ActionListener{
 		mnInsert.add(mntmMovable);
 		mntmEntity.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				InsertMovableDialog dialog = new InsertMovableDialog();
-				dialog.setDialogedFinishListener(new DialogFinishedListener(){
-					public void dialogFinished(Object arg) {
-						if(arg.equals("cancled")) return;
-
-						hasEntity = true;
-						entity = (String) arg;
-					}
-				});
 			}
 		});
 		
@@ -279,6 +264,8 @@ public class Main extends JFrame implements ActionListener{
 		scrollPane = new JScrollPane();
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.getHorizontalScrollBar().setUnitIncrement(16);
+		scrollPane.getVerticalScrollBar().setUnitIncrement(16);
 		GridBagConstraints gbc_scrollPane = new GridBagConstraints();
 		gbc_scrollPane.insets = new Insets(0, 0, 5, 0);
 		gbc_scrollPane.weightx = 1;
@@ -320,7 +307,31 @@ public class Main extends JFrame implements ActionListener{
 		setSet(0);
 		HAS_BEEN_SAVED = false;
 	}
-	
+
+    public static void zoomOut(Drawspace field, Point point) {
+        /*field.setScale(field.getScale() * 0.9f);
+        Point pos = scrollPane.getViewport().getViewPosition();
+
+        int newX = (int)(point.x*(0.9f - 1f) + 0.9f*pos.x);
+        int newY = (int)(point.y*(0.9f - 1f) + 0.9f*pos.y);
+        scrollPane.getViewport().setViewPosition(new Point(newX, newY));
+
+        field.revalidate();
+        field.repaint();*/
+    }
+
+    public static void zoomIn(Drawspace field, Point point) {
+        /*field.setScale(field.getScale() * 1.1f);
+        Point pos = scrollPane.getViewport().getViewPosition();
+
+        int newX = (int)(point.x*(1.1f - 1f) + 1.1f*pos.x);
+        int newY = (int)(point.y*(1.1f - 1f) + 1.1f*pos.y);
+        scrollPane.getViewport().setViewPosition(new Point(newX, newY));
+
+        field.revalidate();
+        field.repaint();*/
+    }
+
 	public void save(String path){
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File(path)));

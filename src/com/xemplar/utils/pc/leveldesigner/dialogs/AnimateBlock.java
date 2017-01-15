@@ -41,15 +41,12 @@ public class AnimateBlock extends JDialog implements ActionListener{
             }
         });
 
-        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 onCancel();
             }
         });
-
-        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -81,8 +78,8 @@ public class AnimateBlock extends JDialog implements ActionListener{
     private void createUIComponents() {
         spinner1 = new JSpinner();
         spinner2 = new JSpinner();
-        spinner1.setModel(new SpinnerNumberModel(0D, 0D, 128D, 0.1D));
-        spinner2.setModel(new SpinnerNumberModel(0D, 0D, 128D, 0.1D));
+        spinner1.setModel(new SpinnerNumberModel(0D, -128D, 128D, 0.1D));
+        spinner2.setModel(new SpinnerNumberModel(0D, -128D, 128D, 0.1D));
         horizontalCheckBox = new JCheckBox();
         panel1 = new JPanel(){
             private static final long serialVersionUID = 1157509861047277132L;

@@ -143,7 +143,7 @@ public class InsertEntityDialog extends JDialog implements ActionListener, ListS
 		requestFocus();
 	}
 	
-	public void setDialogedFinishListener(DialogFinishedListener listener){
+	public void setDialogFinishListener(DialogFinishedListener listener){
 		this.listener = listener;
 	}
 	

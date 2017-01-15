@@ -18,16 +18,21 @@ public class JContextMenu extends JPopupMenu{
         this.listener = listener;
     }
 
-    public void show(Component comp, int x, int y, int tx, int ty){
-        if(setup(tx, ty)) {
+    public void show(Component comp, int x, int y, int tx, int ty, String[] extras){
+        if(setup(tx, ty, extras)) {
             this.show(comp, x, y);
         }
     }
 
-    public boolean setup(int tx, int ty){
+    public void show(Component comp, int x, int y, int tx, int ty){
+        show(comp, x, y, tx, ty, null);
+    }
+
+    public boolean setup(int tx, int ty, String[] extras){
         String id = Main.instance.field.getIdAt(tx, ty);
+        boolean ret = true;
         if(id.equals("00")){
-            return false;
+            ret = false;
         } else {
             if (id.startsWith("e") && !id.equals("ext")) {
                 if(id.startsWith("e03")){
@@ -39,8 +44,28 @@ public class JContextMenu extends JPopupMenu{
                 setupBlock(tx, ty);
             }
         }
+        if(extras != null && extras.length > 0){
+            if(ret == false){
+                title = new JMenuItem("Extra");
+                title.setEnabled(false);
 
-        return true;
+                this.add(title);
+            }
+            this.add(new JSeparator());
+            for(int i = 0; i < extras.length; i++){
+                String[] args = extras[i].substring(1).split("#");
+                JMenu extra = new JMenu("Extra: " + args[0]);
+
+                JMenuItem delete = new JMenuItem("Delete");
+                delete.setActionCommand("context:" + args[1] + ":" + args[2] + ":delete");
+                delete.addActionListener(Main.instance.field);
+
+                extra.add(delete);
+                this.add(extra);
+            }
+            ret |= true;
+        }
+        return ret;
     }
 
     private void setupAnimated(int tx, int ty){

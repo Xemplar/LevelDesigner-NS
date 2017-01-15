@@ -3,37 +3,30 @@ package com.xemplar.utils.pc.leveldesigner;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.FilenameFilter;
-import java.io.IOException;
+import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Map;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSeparator;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.UIManager;
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 
 import com.xemplar.utils.pc.leveldesigner.TileButton.TileGroup;
-import com.xemplar.utils.pc.leveldesigner.dialogs.DialogFinishedListener;
-import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
-import com.xemplar.utils.pc.leveldesigner.dialogs.NewFileDialog;
+import com.xemplar.utils.pc.leveldesigner.dialogs.*;
 
 public class Main extends JFrame implements ActionListener{
 	private static final long serialVersionUID = -2895410634768339711L;
+	private static final String LD_VERSION = "0.1.4 Beta", UPDATE_URL = "https://www.xemplarsoft.com/apps/ldns/version.php",
+                                DOWNLOAD_URL = "https://www.xemplarsoft.com/apps/ldns/ldns.zip";
 	public static Main instance;
+
+	public static final int ACTION_DRAW = 0x01;
+    public static final int ACTION_SELC = 0x02;
+    public static final int ACTION_ERAS = 0x03;
+    public static int CURRENT_ACTION = ACTION_DRAW;
 
 	public boolean HAS_BEEN_SAVED = false;
 	public static String CURRENT_ID = "";
@@ -48,17 +41,22 @@ public class Main extends JFrame implements ActionListener{
 	private JPanel contentPane, buttonContainer;
 	private static JScrollPane scrollPane;
 	private JStatusBar status;
+	private JToolBar tools;
+	private ButtonGroup actions;
 	public Drawspace field;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
-		try{
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch(Exception e){
-			
-		}
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        JDialog.setDefaultLookAndFeelDecorated(true);
+
+        String newest = checkUpdate();
+		System.out.println(newest);
+		if(newest != null && !newest.equalsIgnoreCase(LD_VERSION)){
+		    int res = JOptionPane.showConfirmDialog(null, "There is an update available: v" + newest + " do you want to download? You must manually extract.", "Update Available", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+		    if(res == JOptionPane.YES_OPTION){
+		        download(DOWNLOAD_URL);
+            }
+        }
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -72,14 +70,12 @@ public class Main extends JFrame implements ActionListener{
 		});
 	}
 	
-	public static void setCoords(int x, int y){
+	public static void setChoords(int x, int y){
 		instance.status.setCoords(x, y);
 	}
-	
 	public static void setBoardSize(int width, int height){
 		instance.status.setBoardSize(width, height);
 	}
-	
 	public static void setSelectedBlock(String ID){
 		instance.status.setSelectedBlock(ID);
 	}
@@ -93,12 +89,31 @@ public class Main extends JFrame implements ActionListener{
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
-		
+        // MenuBar Items
 		JMenu mnFile = new JMenu("File");
+        JMenu mnEdit = new JMenu("Edit");
+        JMenu mnInsert = new JMenu("Insert");
 		menuBar.add(mnFile);
-		
+        menuBar.add(mnEdit);
+        menuBar.add(mnInsert);
+
+        // FileMenu Items
 		JMenuItem mntmNew = new JMenuItem("New");
+		JMenuItem mntmOpen = new JMenuItem("Open");
+        JMenuItem mntmExport = new JMenuItem("Export");
+        JMenuItem mntmSave = new JMenuItem("Save");
+        JMenuItem mntmSaveAs = new JMenuItem("Save As");
+        JMenuItem mntmExit = new JMenuItem("Exit");
+
 		mnFile.add(mntmNew);
+        mnFile.add(mntmOpen);
+        mnFile.add(new JSeparator());
+        mnFile.add(mntmExport);
+        mnFile.add(mntmSave);
+        mnFile.add(mntmSaveAs);
+        mnFile.add(new JSeparator());
+        mnFile.add(mntmExit);
+
 		mntmNew.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				NewFileDialog dialog = new NewFileDialog();
@@ -112,15 +127,13 @@ public class Main extends JFrame implements ActionListener{
 						int height = (int)args[1];
 						
 						field.resizeField(width, height);
+						field.extras.clear();
 						HAS_BEEN_SAVED = false;
 					}
 				});
 				setTitle("New Level");
 			}
 		});
-		
-		JMenuItem mntmOpen = new JMenuItem("Open");
-		mnFile.add(mntmOpen);
 		mntmOpen.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				field.loadLevel(openFile());
@@ -129,13 +142,6 @@ public class Main extends JFrame implements ActionListener{
 				}
 			}
 		});
-		
-		
-		JSeparator sep0 = new JSeparator();
-		mnFile.add(sep0);
-		
-		JMenuItem mntmSave = new JMenuItem("Save");
-		mnFile.add(mntmSave);
 		mntmSave.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				System.out.println(HAS_BEEN_SAVED);
@@ -149,9 +155,6 @@ public class Main extends JFrame implements ActionListener{
 				}
 			}
 		});
-		
-		JMenuItem mntmExport = new JMenuItem("Export");
-		mnFile.add(mntmExport);
 		mntmExport.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				save("/home/roxas/levelExp.txt");
@@ -160,9 +163,6 @@ public class Main extends JFrame implements ActionListener{
 				}
 			}
 		});
-		
-		JMenuItem mntmSaveAs = new JMenuItem("Save As");
-		mnFile.add(mntmSaveAs);
 		mntmSaveAs.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				saveFile();
@@ -171,51 +171,38 @@ public class Main extends JFrame implements ActionListener{
 				}
 			}
 		});
-
-        JSeparator sep1 = new JSeparator();
-        mnFile.add(sep1);
-
-        JMenuItem mntmExit = new JMenuItem("Exit");
-        mnFile.add(mntmExit);
         mntmExit.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
 
-		JMenu mnEdit = new JMenu("Edit");
-		menuBar.add(mnEdit);
-		
+		// EditMenu Items
 		JMenuItem mntmUndo = new JMenuItem("Undo");
+        JMenuItem mntmRedo = new JMenuItem("Redo");
+        JMenuItem mntmCut = new JMenuItem("Cut");
+        JMenuItem mntmCopy = new JMenuItem("Copy");
+        JMenuItem mntmPaste = new JMenuItem("Paste");
+        JMenuItem mntmDelete = new JMenuItem("Delete");
+
 		mnEdit.add(mntmUndo);
-		
-		JMenuItem mntmRedo = new JMenuItem("Redo");
 		mnEdit.add(mntmRedo);
-		
-		JSeparator sep2 = new JSeparator();
-		mnEdit.add(sep2);
-		
-		JMenuItem mntmCut = new JMenuItem("Cut");
+		mnEdit.add(new JSeparator());
 		mnEdit.add(mntmCut);
-		
-		JMenuItem mntmCopy = new JMenuItem("Copy");
 		mnEdit.add(mntmCopy);
-		
-		JMenuItem mntmPaste = new JMenuItem("Paste");
 		mnEdit.add(mntmPaste);
-		
-		JMenuItem mntmDelete = new JMenuItem("Delete");
 		mnEdit.add(mntmDelete);
-		
-		JMenu mnInsert = new JMenu("Insert");
-		menuBar.add(mnInsert);
-		
+
+		// InsertMenu Items
 		JMenuItem mntmEntity = new JMenuItem("Entity");
+        JMenuItem mntExtra = new JMenuItem("Extra");
 		mnInsert.add(mntmEntity);
+        mnInsert.add(mntExtra);
+
 		mntmEntity.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				InsertEntityDialog dialog = new InsertEntityDialog();
-				dialog.setDialogedFinishListener(new DialogFinishedListener(){
+				dialog.setDialogFinishListener(new DialogFinishedListener(){
 					public void dialogFinished(Object arg) {
 						if(arg.equals("cancled")) return;
 						
@@ -225,24 +212,103 @@ public class Main extends JFrame implements ActionListener{
 				});
 			}
 		});
-
-		JMenuItem mntmMovable = new JMenuItem("Movable");
-		mnInsert.add(mntmMovable);
-		mntmEntity.addActionListener(new ActionListener(){
+        mntExtra.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
+			    System.out.println("Extra");
+				ExtraDialog dialog = new ExtraDialog(new DialogFinishedListener(){
+                    public void dialogFinished(Object arg) {
+                        if(arg == null) return;
+                        Map<String, Object> params = (Map<String, Object>)arg;
+                        int id = (int) params.get("id");
+                        int x = (int)params.get("x");
+                        int y = (int)params.get("y");
+
+                        String data = "";
+                        switch(id){
+                            case 1: {
+                                data = "x" + id + "#" + x + "#" + y + "#" + params.get("s");
+                                int[] choords = (int[])params.get("swatches");
+                                for(int i = 0; i < choords.length; i+=2){
+                                    data += "#" + choords[i] + "#" + choords[i + 1];
+                                }
+                            } break;
+                            case 2: {
+                                data = "x" + id + "#" + x + "#" + y;
+                            } break;
+                            case 5: {
+                                int dx = (int)params.get("dx");
+                                int dy = (int)params.get("dy");
+                                data = "e" + id + "#" + dx + "#" + dy + "#" + params.get("s");
+                                int[] choords = (int[])params.get("swatches");
+                                for(int i = 0; i < choords.length; i+=2){
+                                    data += "#" + choords[i] + "#" + choords[i + 1];
+                                }
+                            } break;
+                            case 4: {
+                                int dx = (int)params.get("dx");
+                                int dy = (int)params.get("dy");
+                                data = "e" + id + "#" + dx + "#" + dy;
+                            } break;
+                        }
+
+                        System.out.println(data);
+                        if(data.startsWith("e")){
+                            field.setIdAt(x, y, data);
+                        } else if(data.startsWith("x")){
+                            field.extras.add(data);
+                        }
+                        field.repaint();
+                    }
+                });
+                dialog.pack();
+				dialog.setVisible(true);
 			}
 		});
-		
+
+        // Content Items
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{0, 0, 0};
-		gbl_contentPane.rowHeights = new int[]{0, 0, 0};
+		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0};
 		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{1.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, 1.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
-		
+
+        //ToolBar Items
+
+        actions = new ButtonGroup();
+        tools = new JToolBar();
+        tools.setFloatable(false);
+
+        JCheckBox cb_lines = makeLayer("Lines", "lines");
+        JCheckBox cb_block = makeLayer("Blocks", "block");
+        JCheckBox cb_extra = makeLayer("Extras", "extra");
+
+        actions.add(makeTool("cursor", "select", "Select Block", "select"));
+        actions.add(makeTool("pencil", "draw", "Place Blocks", "draw"));
+        actions.add(makeTool("eraser", "erase", "Erase Blocks", "erase"));
+
+        Enumeration<AbstractButton> elements = actions.getElements();
+        while(elements.hasMoreElements()){
+            tools.add(elements.nextElement());
+        }
+
+        tools.add(cb_lines);
+        tools.add(cb_block);
+        tools.add(cb_extra);
+
+        GridBagConstraints gbc_tools = new GridBagConstraints();
+        gbc_tools.insets = new Insets(0, 0, 5, 5);
+        gbc_tools.fill = GridBagConstraints.HORIZONTAL;
+        gbc_tools.gridx = 0;
+        gbc_tools.gridy = 0;
+        gbc_tools.gridwidth = 2;
+        gbc_tools.gridheight = 1;
+        contentPane.add(tools, gbc_tools);
+
+
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane_1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -254,7 +320,7 @@ public class Main extends JFrame implements ActionListener{
 		gbc_scrollPane_1.insets = new Insets(0, 0, 5, 5);
 		gbc_scrollPane_1.fill = GridBagConstraints.VERTICAL;
 		gbc_scrollPane_1.gridx = 0;
-		gbc_scrollPane_1.gridy = 0;
+		gbc_scrollPane_1.gridy = 1;
 		contentPane.add(scrollPane_1, gbc_scrollPane_1);
 		
 		buttonContainer = new JPanel();
@@ -271,7 +337,7 @@ public class Main extends JFrame implements ActionListener{
 		gbc_scrollPane.weightx = 1;
 		gbc_scrollPane.fill = GridBagConstraints.BOTH;
 		gbc_scrollPane.gridx = 1;
-		gbc_scrollPane.gridy = 0;
+		gbc_scrollPane.gridy = 1;
 		contentPane.add(scrollPane, gbc_scrollPane);
 		
 		field = new Drawspace(20, 20);
@@ -284,7 +350,7 @@ public class Main extends JFrame implements ActionListener{
 		gbc_panel.gridwidth = 2;
 		gbc_panel.fill = GridBagConstraints.BOTH;
 		gbc_panel.gridx = 0;
-		gbc_panel.gridy = 1;
+		gbc_panel.gridy = 2;
 		contentPane.add(status, gbc_panel);
 		
 		Dimension d = new Dimension(48, 48);
@@ -308,6 +374,16 @@ public class Main extends JFrame implements ActionListener{
 		HAS_BEEN_SAVED = false;
 	}
 
+	public static String checkUpdate(){ try {
+        URL updateLoc = new URL(UPDATE_URL);
+        BufferedReader data = new BufferedReader(new InputStreamReader(updateLoc.openStream()));
+
+        String curr_version = data.readLine();
+        data.close();
+
+        return curr_version;
+    } catch(Exception e){ return null; }}
+
     public static void zoomOut(Drawspace field, Point point) {
         /*field.setScale(field.getScale() * 0.9f);
         Point pos = scrollPane.getViewport().getViewPosition();
@@ -319,7 +395,6 @@ public class Main extends JFrame implements ActionListener{
         field.revalidate();
         field.repaint();*/
     }
-
     public static void zoomIn(Drawspace field, Point point) {
         /*field.setScale(field.getScale() * 1.1f);
         Point pos = scrollPane.getViewport().getViewPosition();
@@ -332,16 +407,15 @@ public class Main extends JFrame implements ActionListener{
         field.repaint();*/
     }
 
-	public void save(String path){
+	public void save(String path) {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File(path)));
-			writer.write(field.getData());
+			writer.write(field.saveLevel());
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
 	public void setSet(int index){
 		buttonContainer.removeAll();
 		ArrayList<JButton> group = buttons.get(index);
@@ -349,7 +423,7 @@ public class Main extends JFrame implements ActionListener{
 			buttonContainer.add(group.get(i));
 		}
 	}
-	
+
 	public void saveFile(){
 		FileDialog dialog = new FileDialog(this, "Open Nerd Shooter Level", FileDialog.SAVE);
 		if(!FILE_NAME.equals("")){
@@ -382,7 +456,6 @@ public class Main extends JFrame implements ActionListener{
 
 		HAS_BEEN_SAVED = true;
 	}
-	
 	public String[] openFile(){
 		FileDialog dialog = new FileDialog(this, "Open Nerd Shooter Level", FileDialog.LOAD);
 		if(!FILE_NAME.equals("")){
@@ -441,18 +514,95 @@ public class Main extends JFrame implements ActionListener{
 			return new String[]{"null_file"};
 		}
 	}
-	
+
+	public static boolean download(final String file){ try {
+	    Thread t = new Thread(new Runnable() {
+            public void run() { try {
+                Download d = new Download(new URL(file), new File("ldns.zip"));
+                JProgressDialog dialog = new JProgressDialog("Update Download", "Downloading...", d.getSize());
+                while(d.getStatus() == Download.DOWNLOADING){
+                    dialog.updateProgress(d.getProgress());
+                    Thread.sleep(10);
+                }
+                dialog.setVisible(false);
+            } catch(Exception e) {}}
+        });
+	    t.start();
+
+	    return true;
+    } catch(Exception e) { return false; }}
+
 	public void actionPerformed(ActionEvent e){
-		CURRENT_ID = ((JButton)e.getSource()).getName();
-		Main.setSelectedBlock(CURRENT_ID);
-		
-		for(JButton button : buttons.get(0)){
-			((TileButton)button).setSelected(false);
-		}
-		((TileButton)e.getSource()).setSelected(true);
+	    String command = e.getActionCommand();
+	    if(command.startsWith("tool")){
+	        String[] args = command.split(":");
+            if(args[1].equals("select")) CURRENT_ACTION = ACTION_SELC;
+            if(args[1].equals("draw"))   CURRENT_ACTION = ACTION_DRAW;
+            if(args[1].equals("erase"))  CURRENT_ACTION = ACTION_ERAS;
+        } else if(command.startsWith("draw")){
+	        boolean state = ((JCheckBox) e.getSource()).isSelected();
+
+            String[] args = command.split(":");
+            if(args[1].equals("lines")) Drawspace.DRAW_LINES = state;
+            if(args[1].equals("block")) Drawspace.DRAW_BLOCK = state;
+            if(args[1].equals("extra")) Drawspace.DRAW_EXTRA = state;
+
+            field.repaint();
+        } else {
+            CURRENT_ID = ((JButton) e.getSource()).getName();
+            Main.setSelectedBlock(CURRENT_ID);
+
+            for (JButton button : buttons.get(0)) {
+                ((TileButton) button).setSelected(false);
+            }
+            ((TileButton) e.getSource()).setSelected(true);
+
+            CURRENT_ACTION = ACTION_DRAW;
+            actions.clearSelection();
+            for(JToggleButton button : tool_arr){
+                if(button.getActionCommand().equals("draw")){
+                    button.doClick();
+                    button.setSelected(true);
+                    actions.setSelected(button.getModel(), false);
+                } else {
+                    button.setSelected(false);
+                }
+                button.updateUI();
+            }
+        }
 	}
-	
 	public void setTitle(String title){
 		super.setTitle("Level Designer - " + title);
 	}
+
+	private ArrayList<JToggleButton> tool_arr = new ArrayList<JToggleButton>();
+    private JToggleButton makeTool(String imageName, String actionID, String tip, String alt) {
+        Image img = null;
+        try{
+            img = ImageIO.read(new File("res/icons/" + imageName + ".png"));
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        JToggleButton button = new JToggleButton();
+        button.setActionCommand("tool:" + actionID);
+        button.setToolTipText(tip);
+        button.addActionListener(this);
+        button.setFocusPainted(true);
+
+        if (img != null) {
+            button.setIcon(new ImageIcon(img, alt));
+        }
+
+        tool_arr.add(button);
+        return tool_arr.get(tool_arr.size() - 1);
+    }
+    private JCheckBox makeLayer(String text, String actionID){
+	    JCheckBox box = new JCheckBox(text);
+	    box.setActionCommand("draw:" + actionID);
+	    box.addActionListener(this);
+	    box.setSelected(true);
+
+	    return box;
+    }
 }

@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
@@ -17,8 +18,9 @@ import com.xemplar.utils.pc.leveldesigner.dialogs.InsertEntityDialog;
 
 public class TileButton extends JButton{
 	private static final long serialVersionUID = -6168609316617502199L;
+	public static final Map<String, BufferedImage> IMAGES = new HashMap<String, BufferedImage>();
+	public static final Map<String, BufferedImage> EXTRAS= new HashMap<String, BufferedImage>();
 	public static final Map<String, String> ALL= new HashMap<String, String>();
-	public static final Map<String, BufferedImage> IMAGES= new HashMap<String, BufferedImage>();
 	public static ArrayList<TileGroup> groups = new ArrayList<TileGroup>();
 	
 	public static String PACK_NAME;
@@ -50,12 +52,14 @@ public class TileButton extends JButton{
 					int id = Integer.parseInt(com[4]);
 					String[] args = com[2].split("/");
 					InsertEntityDialog.creators.add(new EntityCreator(com[1], id, com[3], args));
+				} else if(com[0].equalsIgnoreCase("extra")){
+					EXTRAS.put(com[1], ImageIO.read(new File("res/" + DIR + "/" + com[2])));
 				} else if(com[0].equalsIgnoreCase("all")){
 					for(TileGroup g : groups){
 						g.put(com[2], com[1]);
 					}
 					ALL.put(com[2], com[1]);
-					
+
 					BufferedImage in = ImageIO.read(new File("res/" + DIR + "/" + com[1]));
 					
 					int padding = 0;
@@ -74,7 +78,7 @@ public class TileButton extends JButton{
 			count++;
 		}
 		read.close();
-	} catch(Exception e){}}
+	} catch(Exception e){e.printStackTrace();}}
 	
 	public static String id_pressed = "";
 	
@@ -86,6 +90,8 @@ public class TileButton extends JButton{
 	}
 	
 	public void paint(Graphics g){
+	    g.setColor(Color.WHITE);
+	    g.fillRect(0, 0, getWidth(), getHeight());
 		g.drawImage(IMAGES.get(ID), 0, 0, getWidth() - 5, getHeight() - 5, null);
 	}
 	

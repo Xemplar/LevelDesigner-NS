@@ -9,8 +9,13 @@ Group:Sand
 Group:Misc
 Entity:Bullet:Qty:bullet.png:01
 Entity:Bricks:Health:brick.png:02
+Extra:torch:tochLit.png
+Extra:window:window.png
+Extra:door_open:door_open.png
+Extra:door_locked:door_locked.png
 All:jaxon.png:s
 All:exit.png:ext
+All:switchMid.png:swi
 All:grass.png:gs
 All:grassCenter.png:gc
 All:grassLeft.png:gl

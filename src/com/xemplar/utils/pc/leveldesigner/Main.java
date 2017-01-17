@@ -19,7 +19,7 @@ import com.xemplar.utils.pc.leveldesigner.dialogs.*;
 
 public class Main extends JFrame implements ActionListener{
 	private static final long serialVersionUID = -2895410634768339711L;
-	private static final String LD_VERSION = "0.1.4 Beta", UPDATE_URL = "https://www.xemplarsoft.com/apps/ldns/version.php",
+	private static final String LD_VERSION = "0.1.4_1036 Beta", UPDATE_URL = "https://www.xemplarsoft.com/apps/ldns/version.php",
                                 DOWNLOAD_URL = "https://www.xemplarsoft.com/apps/ldns/ldns.zip";
 	public static Main instance;
 
@@ -38,6 +38,65 @@ public class Main extends JFrame implements ActionListener{
 	public static int CURRENT_SET = 0;
 	
 	private ArrayList<ArrayList<JButton>> buttons = new ArrayList<ArrayList<JButton>>();
+	public DialogFinishedListener extra = new DialogFinishedListener() {
+		public void dialogFinished(Object arg) {
+			if(arg == null) return;
+			Map<String, Object> params = (Map<String, Object>)arg;
+			int id = (int) params.get("id");
+			int x = (int)params.get("x");
+			int y = (int)params.get("y");
+			boolean edit = (boolean)params.get("edit");
+
+            int x_old = 0;
+            int y_old = 0;
+
+			if(edit){
+                x_old = (int)params.get("x-old");
+                y_old = (int)params.get("y-old");
+
+                edit &= !(x == x_old && y == y_old);
+            }
+
+			String data = "";
+			switch(id){
+				case 1: {
+					data = "x" + id + "#" + x + "#" + y + "#" + params.get("s");
+					int[] choords = (int[])params.get("swatches");
+					for(int i = 0; i < choords.length; i+=2){
+						data += "#" + choords[i] + "#" + choords[i + 1];
+					}
+				} break;
+				case 2: {
+					data = "x" + id + "#" + x + "#" + y;
+				} break;
+				case 5: {
+					int dx = (int)params.get("dx");
+					int dy = (int)params.get("dy");
+					data = "e" + id + "#" + dx + "#" + dy + "#" + params.get("s");
+					int[] choords = (int[])params.get("swatches");
+					for(int i = 0; i < choords.length; i+=2){
+						data += "#" + choords[i] + "#" + choords[i + 1];
+					}
+				} break;
+				case 4: {
+					int dx = (int)params.get("dx");
+					int dy = (int)params.get("dy");
+					data = "e" + id + "#" + dx + "#" + dy;
+				} break;
+			}
+
+			System.out.println(data);
+			if(data.startsWith("e")){
+				field.setIdAt(x, y, data);
+			} else if(data.startsWith("x")){
+				field.extras.add(data);
+			}
+			if(edit){
+			    field.setIdAt(x_old, y_old, "00");
+            }
+			field.repaint();
+		}
+	};
 	private JPanel contentPane, buttonContainer;
 	private static JScrollPane scrollPane;
 	private JStatusBar status;
@@ -117,7 +176,7 @@ public class Main extends JFrame implements ActionListener{
 		mntmNew.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				NewFileDialog dialog = new NewFileDialog();
-				dialog.setDialogedFinishListener(new DialogFinishedListener(){
+				dialog.setDialogFinishListener(new DialogFinishedListener(){
 					public void dialogFinished(Object arg) {
 						if(arg.equals("cancled")) return;
 						
@@ -194,7 +253,7 @@ public class Main extends JFrame implements ActionListener{
 		mnEdit.add(mntmDelete);
 
 		// InsertMenu Items
-		JMenuItem mntmEntity = new JMenuItem("Entity");
+		JMenuItem mntmEntity = new JMenuItem("Object");
         JMenuItem mntExtra = new JMenuItem("Extra");
 		mnInsert.add(mntmEntity);
         mnInsert.add(mntExtra);
@@ -215,51 +274,7 @@ public class Main extends JFrame implements ActionListener{
         mntExtra.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 			    System.out.println("Extra");
-				ExtraDialog dialog = new ExtraDialog(new DialogFinishedListener(){
-                    public void dialogFinished(Object arg) {
-                        if(arg == null) return;
-                        Map<String, Object> params = (Map<String, Object>)arg;
-                        int id = (int) params.get("id");
-                        int x = (int)params.get("x");
-                        int y = (int)params.get("y");
-
-                        String data = "";
-                        switch(id){
-                            case 1: {
-                                data = "x" + id + "#" + x + "#" + y + "#" + params.get("s");
-                                int[] choords = (int[])params.get("swatches");
-                                for(int i = 0; i < choords.length; i+=2){
-                                    data += "#" + choords[i] + "#" + choords[i + 1];
-                                }
-                            } break;
-                            case 2: {
-                                data = "x" + id + "#" + x + "#" + y;
-                            } break;
-                            case 5: {
-                                int dx = (int)params.get("dx");
-                                int dy = (int)params.get("dy");
-                                data = "e" + id + "#" + dx + "#" + dy + "#" + params.get("s");
-                                int[] choords = (int[])params.get("swatches");
-                                for(int i = 0; i < choords.length; i+=2){
-                                    data += "#" + choords[i] + "#" + choords[i + 1];
-                                }
-                            } break;
-                            case 4: {
-                                int dx = (int)params.get("dx");
-                                int dy = (int)params.get("dy");
-                                data = "e" + id + "#" + dx + "#" + dy;
-                            } break;
-                        }
-
-                        System.out.println(data);
-                        if(data.startsWith("e")){
-                            field.setIdAt(x, y, data);
-                        } else if(data.startsWith("x")){
-                            field.extras.add(data);
-                        }
-                        field.repaint();
-                    }
-                });
+				ExtraDialog dialog = new ExtraDialog(extra);
                 dialog.pack();
 				dialog.setVisible(true);
 			}

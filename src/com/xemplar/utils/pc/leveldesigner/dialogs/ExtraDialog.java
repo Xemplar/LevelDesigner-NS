@@ -1,6 +1,8 @@
 package com.xemplar.utils.pc.leveldesigner.dialogs;
 
+import com.sun.awt.AWTUtilities;
 import com.xemplar.utils.pc.leveldesigner.Drawspace;
+import com.xemplar.utils.pc.leveldesigner.Main;
 import com.xemplar.utils.pc.leveldesigner.TileButton;
 
 import javax.swing.*;
@@ -28,14 +30,25 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
     private JSpinner yDest;
     private JButton selectDest;
 
+    private int eX, eY;
+    private String prev;
+
     private BlockModel model;
     private DialogFinishedListener listener;
     private String current, image = "";
     private int currentID;
 
-    public ExtraDialog(DialogFinishedListener listener) {
+    public ExtraDialog(DialogFinishedListener listener){
+        this(listener, null, -1, -1);
+    }
+
+    public ExtraDialog(DialogFinishedListener listener, String edit, int eX, int eY) {
         instance = this;
         this.listener = listener;
+
+        this.prev = edit;
+        this.eX = eX;
+        this.eY = eY;
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -62,20 +75,6 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                xPos.setEnabled(false);
-                yPos.setEnabled(false);
-                xDest.setEnabled(false);
-                yDest.setEnabled(false);
-
-                swatches.setEnabled(false);
-                addSwatch.setEnabled(false);
-                selectPos.setEnabled(false);
-                selectDest.setEnabled(false);
-            }
-        });
     }
 
     private void onOK() {
@@ -93,6 +92,11 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
         params.put("x", xPos.getValue());
         params.put("y", yPos.getValue());
         params.put("id", currentID);
+        params.put("edit", prev != null);
+        if(prev != null){
+            params.put("x-old", eX);
+            params.put("y-old", eY);
+        }
         switch(currentID){
             case 1:
                 params.put("s", swatches.length / 2);
@@ -111,10 +115,10 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
         listener.dialogFinished(params);
         dispose();
     }
-
     private void onCancel() {
         Drawspace.COMMAND = "";
         this.setOpacity(1F);
+        AWTUtilities.setWindowOpaque(this, true);
         listener.dialogFinished(null);
         Drawspace.SELECT = false;
         dispose();
@@ -128,20 +132,28 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
             Drawspace.SELECT = true;
             Drawspace.COMMAND = "pos";
             this.setOpacity(0.3F);
+            AWTUtilities.setWindowOpaque(this, false);
         } else if(name.contains("dest")){
             Drawspace.SELECT = true;
             Drawspace.COMMAND = "dest";
             this.setOpacity(0.3F);
+            AWTUtilities.setWindowOpaque(this, false);
         } else if(name.contains("swatch")){
             Drawspace.SELECT = true;
             Drawspace.COMMAND = "swatch";
             this.setOpacity(0.3F);
+            AWTUtilities.setWindowOpaque(this, false);
         }
     }
-
     public void valueChanged(ListSelectionEvent e) {
-        current = nameLookup.get(((JList<String>)e.getSource()).getSelectedValue());
-        if(current.equals("wind")){
+        String data = ((JList<String>)e.getSource()).getSelectedValue();
+        current = nameLookup.get(data);
+        openFields(current);
+        imgDisp.repaint();
+    }
+
+    private void openFields(String selected){
+        if(selected.equals("wind")){
             xPos.setEnabled(true);
             yPos.setEnabled(true);
             xDest.setEnabled(false);
@@ -154,7 +166,7 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
 
             setImage("window");
             currentID = 2;
-        } else if(current.equals("toch")){
+        } else if(selected.equals("toch")){
             xPos.setEnabled(true);
             yPos.setEnabled(true);
             xDest.setEnabled(false);
@@ -167,7 +179,7 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
 
             setImage("torch");
             currentID = 1;
-        } else if(current.equals("door")){
+        } else if(selected.equals("door")){
             xPos.setEnabled(true);
             yPos.setEnabled(true);
             xDest.setEnabled(true);
@@ -180,7 +192,7 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
 
             setImage("door_open");
             currentID = 4;
-        } else if(current.equals("lkdr")){
+        } else if(selected.equals("lkdr")){
             xPos.setEnabled(true);
             yPos.setEnabled(true);
             xDest.setEnabled(true);
@@ -193,8 +205,20 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
 
             setImage("door_locked");
             currentID = 5;
+        } else {
+            xPos.setEnabled(false);
+            yPos.setEnabled(false);
+            xDest.setEnabled(false);
+            yDest.setEnabled(false);
+
+            swatches.setEnabled(false);
+            addSwatch.setEnabled(false);
+            selectPos.setEnabled(false);
+            selectDest.setEnabled(false);
+
+            setImage(null);
+            currentID = -1;
         }
-        imgDisp.repaint();
     }
 
     private void createUIComponents() {
@@ -234,7 +258,60 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
         this.setMaximumSize(new Dimension(600, 300));
         this.setMinimumSize(new Dimension(600, 300));
         this.setSize(new Dimension(600, 300));
+        this.setAlwaysOnTop(true);
         this.pack();
+
+        System.out.println("Prev is null: " + (prev == null ? "yes" : prev));
+
+        if(prev != null){
+            String[] args = prev.substring(1).split("#");
+            int id = Integer.parseInt(args[0]);
+            switch(id){
+                case 1:{
+                    extras.setSelectedIndex(2);
+                    current = "toch";
+                    xPos.setValue(Integer.parseInt(args[1]));
+                    yPos.setValue(Integer.parseInt(args[2]));
+                    for(int i = 4; i < args.length; i+=2){
+                        int x = Integer.parseInt(args[i]);
+                        int y = Integer.parseInt(args[i+1]);
+                        String block = Main.instance.field.getIdAt(x, y);
+                        ((BlockModel)instance.swatches.getModel()).addSwatch(new Swatch(block, x, y));
+                    }
+                } break;
+                case 2:{
+                    extras.setSelectedIndex(1);
+                    current = "wind";
+                    xPos.setValue(Integer.parseInt(args[1]));
+                    yPos.setValue(Integer.parseInt(args[2]));
+                } break;
+                case 4:{
+                    extras.setSelectedIndex(3);
+                    current = "door";
+                    xPos.setValue(eX);
+                    yPos.setValue(eY);
+                    xDest.setValue(Integer.parseInt(args[1]));
+                    yDest.setValue(Integer.parseInt(args[2]));
+                } break;
+                case 5:{
+                    extras.setSelectedIndex(4);
+                    current = "lkdr";
+                    xPos.setValue(eX);
+                    yPos.setValue(eY);
+                    xDest.setValue(Integer.parseInt(args[1]));
+                    yDest.setValue(Integer.parseInt(args[2]));
+                    for(int i = 4; i < args.length; i+=2){
+                        int x = Integer.parseInt(args[i]);
+                        int y = Integer.parseInt(args[i+1]);
+                        String block = Main.instance.field.getIdAt(x, y);
+                        ((BlockModel)instance.swatches.getModel()).addSwatch(new Swatch(block, x, y));
+                    }
+                } break;
+            }
+            openFields(current);
+        } else {
+            openFields("");
+        }
     }
 
     public static void setValue(String command, int x, int y, Object args){
@@ -257,6 +334,7 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
 
         instance.setVisible(true);
         instance.setOpacity(1F);
+        AWTUtilities.setWindowOpaque(instance, true);
     }
 
     private void setImage(String name){

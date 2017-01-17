@@ -312,7 +312,19 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
         } else if(action.equals("del")){ // Delete
             ids[tx + ty * width] = "00";
         } else if(action.equals("edi")){ // Edit Entity
+            if(id.startsWith("e") && !id.equals("ext")){
+                String[] args = id.substring(1).split("#");
+                int type = Integer.parseInt(args[0]);
 
+                switch(type){
+                    case 5:
+                    case 4: {
+                        ExtraDialog dialog = new ExtraDialog(Main.instance.extra, id, tx, ty);
+                        dialog.pack();
+                        dialog.setVisible(true);
+                    } break;
+                }
+            }
         } else if(action.equals("context")){
             if(dat[3].equals("delete")){
                 for(int i = 0 ; i < extras.size(); i++){
@@ -341,6 +353,7 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
             return;
         }
         if(e.getButton() == MouseEvent.BUTTON1){
+            if(getIdAt(mouseX, mouseY).startsWith("e")) return;
             switch(Main.CURRENT_ACTION){
                 case Main.ACTION_DRAW: {
                     if(Main.hasEntity){
@@ -386,16 +399,14 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 		Main.setChoords(mouseX, mouseY);
         String data = ids[mouseX + mouseY * width];
 		if((data.startsWith("e") && !data.startsWith("ext"))){
-		    boolean dirty = mX == mouseX && mY == mouseY;
 		    this.mX = mouseX;
 		    this.mY = mouseY;
 		    this.mID = Integer.parseInt(data.substring(1, data.indexOf("#")));
-		    if(dirty) repaint();
+		    repaint();
         } else if(mouseX != -1 && mouseY != -1){
-            boolean dirty = mX == mouseX && mY == mouseY;
             this.mX = -1;
             this.mY = -1;
-            if(dirty) repaint();
+            repaint();
         }
 
         for(String s : extras) {
@@ -415,6 +426,8 @@ public class Drawspace extends JPanel implements MouseListener, MouseMotionListe
 
         int b1 = MouseEvent.BUTTON1_DOWN_MASK;
         int b2 = MouseEvent.BUTTON3_DOWN_MASK;
+
+        if(getIdAt(mouseX, mouseY).startsWith("e")) return;
 
         switch(Main.CURRENT_ACTION){
             case Main.ACTION_DRAW: {

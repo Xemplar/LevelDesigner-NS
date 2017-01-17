@@ -44,7 +44,7 @@ public class NewFileDialog extends JDialog implements ActionListener{
 		contentPanel.add(lbl1);
 		
 		width = new JSpinner();
-		width.setModel(new SpinnerNumberModel(12, 12, 192, 1));
+		width.setModel(new SpinnerNumberModel(12, 12, 1024, 1));
 		sl_contentPanel.putConstraint(SpringLayout.WEST, width, 10, SpringLayout.EAST, lbl1);
 		sl_contentPanel.putConstraint(SpringLayout.EAST, width, 300, SpringLayout.WEST, contentPanel);
 		sl_contentPanel.putConstraint(SpringLayout.SOUTH, lbl1, 0, SpringLayout.SOUTH, width);
@@ -52,7 +52,7 @@ public class NewFileDialog extends JDialog implements ActionListener{
 		contentPanel.add(width);
 		
 		height = new JSpinner();
-		height.setModel(new SpinnerNumberModel(7, 7, 112, 1));
+		height.setModel(new SpinnerNumberModel(7, 7, 1024, 1));
 		sl_contentPanel.putConstraint(SpringLayout.NORTH, height, 5, SpringLayout.SOUTH, width);
 		sl_contentPanel.putConstraint(SpringLayout.WEST, height, 0, SpringLayout.WEST, width);
 		sl_contentPanel.putConstraint(SpringLayout.EAST, height, 0, SpringLayout.EAST, width);
@@ -83,7 +83,7 @@ public class NewFileDialog extends JDialog implements ActionListener{
 		requestFocus();
 	}
 
-	public void setDialogedFinishListener(DialogFinishedListener listener){
+	public void setDialogFinishListener(DialogFinishedListener listener){
 		this.listener = listener;
 	}
 	

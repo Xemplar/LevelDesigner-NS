@@ -7,158 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50b6baaa-853b-4162-888d-f8ae6b1cb683" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Download.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/ExtraCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JProgressDialog.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/textures/ns/door_closedMid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/textures/ns/door_closedTop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/textures/ns/door_openMid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/textures/ns/door_openTop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/textures/ns/torchLit.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace$1.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace$1.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2$1.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$1.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2$1.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$3.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$4.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$5.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$6.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$7.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$8.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/TileButton$TileGroup.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/TileButton$TileGroup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/TileButton.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/TileButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/CheckPoint.png" afterPath="$PROJECT_DIR$/res/textures/ns/CheckPoint.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/bush.png" afterPath="$PROJECT_DIR$/res/textures/ns/bush.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castle.png" afterPath="$PROJECT_DIR$/res/textures/ns/castle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleCenter.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleCenter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleCliffLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleCliffLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleCliffLeftAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleCliffLeftAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleCliffRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleCliffRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleCliffRightAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleCliffRightAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleHalf.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleHalf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleHalfLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleHalfLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleHalfMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleHalfMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleHalfRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleHalfRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/castleRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/castleRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/coinBronze.png" afterPath="$PROJECT_DIR$/res/textures/ns/coinBronze.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/coinGold.png" afterPath="$PROJECT_DIR$/res/textures/ns/coinGold.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/coinSilver.png" afterPath="$PROJECT_DIR$/res/textures/ns/coinSilver.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirt.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtCenter.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtCenter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtCliffLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtCliffLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtCliffLeftAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtCliffLeftAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtCliffRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtCliffRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtCliffRightAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtCliffRightAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtHalf.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtHalf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtHalfLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtHalfLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtHalfMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtHalfMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtHalfRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtHalfRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/dirtRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/dirtRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/exit.png" afterPath="$PROJECT_DIR$/res/textures/ns/exit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/gemBlue.png" afterPath="$PROJECT_DIR$/res/textures/ns/gemBlue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/gemGreen.png" afterPath="$PROJECT_DIR$/res/textures/ns/gemGreen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/gemRed.png" afterPath="$PROJECT_DIR$/res/textures/ns/gemRed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/gemYellow.png" afterPath="$PROJECT_DIR$/res/textures/ns/gemYellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grass.png" afterPath="$PROJECT_DIR$/res/textures/ns/grass.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassCenter.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassCenter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassCliffLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassCliffLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassCliffLeftAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassCliffLeftAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassCliffRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassCliffRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassCliffRightAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassCliffRightAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassHalf.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassHalf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassHalfLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassHalfLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassHalfMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassHalfMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassHalfRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassHalfRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/grassRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/grassRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/jaxon.png" afterPath="$PROJECT_DIR$/res/textures/ns/jaxon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/keyBlue.png" afterPath="$PROJECT_DIR$/res/textures/ns/keyBlue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/keyGreen.png" afterPath="$PROJECT_DIR$/res/textures/ns/keyGreen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/keyRed.png" afterPath="$PROJECT_DIR$/res/textures/ns/keyRed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/keyYellow.png" afterPath="$PROJECT_DIR$/res/textures/ns/keyYellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/ladder_mid.png" afterPath="$PROJECT_DIR$/res/textures/ns/ladder_mid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/ladder_top.png" afterPath="$PROJECT_DIR$/res/textures/ns/ladder_top.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lava.png" afterPath="$PROJECT_DIR$/res/textures/ns/lava.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lavaTop.png" afterPath="$PROJECT_DIR$/res/textures/ns/lavaTop.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lavaTop_mid.png" afterPath="$PROJECT_DIR$/res/textures/ns/lavaTop_mid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lock_blue.png" afterPath="$PROJECT_DIR$/res/textures/ns/lock_blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lock_green.png" afterPath="$PROJECT_DIR$/res/textures/ns/lock_green.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lock_red.png" afterPath="$PROJECT_DIR$/res/textures/ns/lock_red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/lock_yellow.png" afterPath="$PROJECT_DIR$/res/textures/ns/lock_yellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sand.png" afterPath="$PROJECT_DIR$/res/textures/ns/sand.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandCenter.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandCenter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandCliffLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandCliffLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandCliffLeftAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandCliffLeftAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandCliffRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandCliffRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandCliffRightAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandCliffRightAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandHalf.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandHalf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandHalfLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandHalfLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandHalfMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandHalfMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandHalfRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandHalfRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandSpikesDown.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandSpikesDown.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandSpikesLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandSpikesLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandSpikesRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandSpikesRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/sandSpikesUp.png" afterPath="$PROJECT_DIR$/res/textures/ns/sandSpikesUp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snow.png" afterPath="$PROJECT_DIR$/res/textures/ns/snow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowCenter.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowCenter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowCliffLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowCliffLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowCliffLeftAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowCliffLeftAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowCliffRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowCliffRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowCliffRightAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowCliffRightAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowHalf.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowHalf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowHalfLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowHalfLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowHalfMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowHalfMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowHalfRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowHalfRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/snowRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/snowRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stone.png" afterPath="$PROJECT_DIR$/res/textures/ns/stone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneCenter.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneCenter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneCliffLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneCliffLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneCliffLeftAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneCliffLeftAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneCliffRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneCliffRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneCliffRightAlt.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneCliffRightAlt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneHalf.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneHalf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneHalfLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneHalfLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneHalfMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneHalfMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneHalfRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneHalfRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneSpikesDown.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneSpikesDown.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneSpikesLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneSpikesLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneSpikesRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneSpikesRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/stoneSpikesUp.png" afterPath="$PROJECT_DIR$/res/textures/ns/stoneSpikesUp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/switchLeft.png" afterPath="$PROJECT_DIR$/res/textures/ns/switchLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/switchMid.png" afterPath="$PROJECT_DIR$/res/textures/ns/switchMid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/switchRight.png" afterPath="$PROJECT_DIR$/res/textures/ns/switchRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/tochLit.png" afterPath="$PROJECT_DIR$/res/textures/ns/tochLit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/torch.png" afterPath="$PROJECT_DIR$/res/textures/ns/torch.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/water.png" afterPath="$PROJECT_DIR$/res/textures/ns/water.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/waterTop.png" afterPath="$PROJECT_DIR$/res/textures/ns/waterTop.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/waterTop_mid.png" afterPath="$PROJECT_DIR$/res/textures/ns/waterTop_mid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/textures/ns/window.png" afterPath="$PROJECT_DIR$/res/textures/ns/window.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/nerdshooter.ldc" afterPath="$PROJECT_DIR$/res/nerdshooter.ldc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/TileButton.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/TileButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java" />
     </list>
     <ignored path="LevelDesigner-NS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -182,21 +47,20 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4602">
-              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="234">
+              <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1402#1422#0" expanded="true" />
+                <element signature="e#1407#1427#0" expanded="true" />
+                <element signature="class#1474:3109" expanded="false" />
                 <element signature="method#main#0;class#Main#0" expanded="false" />
-                <element signature="class#3816:4355" expanded="false" />
-                <element signature="class#4391:4561" expanded="false" />
-                <element signature="class#4597:4856" expanded="false" />
-                <element signature="class#4894:5069" expanded="false" />
-                <element signature="class#5107:5260" expanded="false" />
-                <element signature="class#5302:5432" expanded="false" />
-                <element signature="class#6167:6525" expanded="false" />
-                <element signature="class#6567:9068" expanded="false" />
-                <element signature="e#12868#12877#0" expanded="true" />
+                <element signature="class#5501:6038" expanded="false" />
+                <element signature="class#6074:6244" expanded="false" />
+                <element signature="class#6280:6539" expanded="false" />
+                <element signature="class#6577:6752" expanded="false" />
+                <element signature="class#6790:6943" expanded="false" />
+                <element signature="class#6985:7115" expanded="false" />
+                <element signature="e#12269#12278#0" expanded="true" />
                 <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
                 <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
                 <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -204,9 +68,11 @@
                 <element signature="method#setSet#0;class#Main#0" expanded="false" />
                 <element signature="method#saveFile#0;class#Main#0" expanded="false" />
                 <element signature="method#openFile#0;class#Main#0" expanded="false" />
-                <element signature="e#16357#16365#0" expanded="true" />
+                <element signature="e#15758#15766#0" expanded="true" />
                 <element signature="method#download#0;class#Main#0" expanded="false" />
-                <element signature="e#19278#19293#0" expanded="true" />
+                <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+                <element signature="e#18679#18694#0" expanded="true" />
+                <element signature="method#makeTool#0;class#Main#0" expanded="false" />
                 <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
               </folding>
             </state>
@@ -216,8 +82,8 @@
       <file leaf-file-name="Drawspace.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="397" column="32" lean-forward="false" selection-start-line="397" selection-start-column="32" selection-end-line="397" selection-end-column="32" />
+            <state relative-caret-position="261">
+              <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
               <folding>
                 <element signature="method#loadLevel#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#saveLevel#0;class#Drawspace#0" expanded="false" />
@@ -225,10 +91,11 @@
                 <element signature="method#drawLines#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#drawBlocks#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#drawExtras#0;class#Drawspace#0" expanded="false" />
+                <element signature="method#drawHighlight#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#drawEntity#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#highlightAt#0;class#Drawspace#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#mouseClicked#0;class#Drawspace#0" expanded="false" />
+                <element signature="method#mouseMoved#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#mouseDragged#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#mouseWheelMoved#0;class#Drawspace#0" expanded="false" />
                 <element signature="method#getPreferredSize#0;class#Drawspace#0" expanded="false" />
@@ -238,17 +105,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="InsertEntityDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="162" column="55" lean-forward="false" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
+              <folding>
+                <element signature="method#InsertEntityDialog#0;class#InsertEntityDialog#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ExtraDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="227" column="47" lean-forward="true" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
+            <state relative-caret-position="145">
+              <caret line="143" column="22" lean-forward="false" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
+                <element signature="method#setValue#0;class#ExtraDialog#0" expanded="false" />
                 <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
                 <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
                 <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewFileDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -286,6 +177,8 @@
       <find>height) * -1;</find>
       <find>setVis</find>
       <find>setVi</find>
+      <find>setEnab</find>
+      <find>setOp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -315,9 +208,11 @@
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JProgressDialog.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Download.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form" />
-        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
-        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java" />
       </list>
     </option>
   </component>
@@ -369,6 +264,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -451,9 +349,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -775,7 +670,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19253731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18358208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -810,7 +705,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -819,14 +714,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/TileButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -841,17 +728,16 @@
           <caret line="254" column="46" lean-forward="false" selection-start-line="254" selection-start-column="46" selection-end-line="254" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1422#0" expanded="true" />
+            <element signature="e#1407#1427#0" expanded="true" />
+            <element signature="class#1474:3109" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#3816:4355" expanded="false" />
-            <element signature="class#4391:4561" expanded="false" />
-            <element signature="class#4597:4856" expanded="false" />
-            <element signature="class#4894:5069" expanded="false" />
-            <element signature="class#5107:5260" expanded="false" />
-            <element signature="class#5302:5432" expanded="false" />
-            <element signature="class#6167:6525" expanded="false" />
-            <element signature="class#6567:9068" expanded="false" />
-            <element signature="e#12868#12877#0" expanded="true" />
+            <element signature="class#5501:6038" expanded="false" />
+            <element signature="class#6074:6244" expanded="false" />
+            <element signature="class#6280:6539" expanded="false" />
+            <element signature="class#6577:6752" expanded="false" />
+            <element signature="class#6790:6943" expanded="false" />
+            <element signature="class#6985:7115" expanded="false" />
+            <element signature="e#12269#12278#0" expanded="true" />
             <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
             <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -859,9 +745,11 @@
             <element signature="method#setSet#0;class#Main#0" expanded="false" />
             <element signature="method#saveFile#0;class#Main#0" expanded="false" />
             <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#16357#16365#0" expanded="true" />
+            <element signature="e#15758#15766#0" expanded="true" />
             <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="e#19278#19293#0" expanded="true" />
+            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+            <element signature="e#18679#18694#0" expanded="true" />
+            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
             <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -881,6 +769,8 @@
           <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
+            <element signature="method#setValue#0;class#ExtraDialog#0" expanded="false" />
             <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
             <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
             <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
@@ -921,17 +811,16 @@
           <caret line="303" column="19" lean-forward="false" selection-start-line="303" selection-start-column="12" selection-end-line="303" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1422#0" expanded="true" />
+            <element signature="e#1407#1427#0" expanded="true" />
+            <element signature="class#1474:3109" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#3816:4355" expanded="false" />
-            <element signature="class#4391:4561" expanded="false" />
-            <element signature="class#4597:4856" expanded="false" />
-            <element signature="class#4894:5069" expanded="false" />
-            <element signature="class#5107:5260" expanded="false" />
-            <element signature="class#5302:5432" expanded="false" />
-            <element signature="class#6167:6525" expanded="false" />
-            <element signature="class#6567:9068" expanded="false" />
-            <element signature="e#12868#12877#0" expanded="true" />
+            <element signature="class#5501:6038" expanded="false" />
+            <element signature="class#6074:6244" expanded="false" />
+            <element signature="class#6280:6539" expanded="false" />
+            <element signature="class#6577:6752" expanded="false" />
+            <element signature="class#6790:6943" expanded="false" />
+            <element signature="class#6985:7115" expanded="false" />
+            <element signature="e#12269#12278#0" expanded="true" />
             <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
             <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -939,9 +828,11 @@
             <element signature="method#setSet#0;class#Main#0" expanded="false" />
             <element signature="method#saveFile#0;class#Main#0" expanded="false" />
             <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#16357#16365#0" expanded="true" />
+            <element signature="e#15758#15766#0" expanded="true" />
             <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="e#19278#19293#0" expanded="true" />
+            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+            <element signature="e#18679#18694#0" expanded="true" />
+            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
             <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -970,10 +861,11 @@
             <element signature="method#drawLines#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawBlocks#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawExtras#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#drawHighlight#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawEntity#0;class#Drawspace#0" expanded="false" />
             <element signature="method#highlightAt#0;class#Drawspace#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseClicked#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#mouseMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseWheelMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#getPreferredSize#0;class#Drawspace#0" expanded="false" />
@@ -1010,17 +902,16 @@
           <caret line="185" column="16" lean-forward="false" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1422#0" expanded="true" />
+            <element signature="e#1407#1427#0" expanded="true" />
+            <element signature="class#1474:3109" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#3816:4355" expanded="false" />
-            <element signature="class#4391:4561" expanded="false" />
-            <element signature="class#4597:4856" expanded="false" />
-            <element signature="class#4894:5069" expanded="false" />
-            <element signature="class#5107:5260" expanded="false" />
-            <element signature="class#5302:5432" expanded="false" />
-            <element signature="class#6167:6525" expanded="false" />
-            <element signature="class#6567:9068" expanded="false" />
-            <element signature="e#12868#12877#0" expanded="true" />
+            <element signature="class#5501:6038" expanded="false" />
+            <element signature="class#6074:6244" expanded="false" />
+            <element signature="class#6280:6539" expanded="false" />
+            <element signature="class#6577:6752" expanded="false" />
+            <element signature="class#6790:6943" expanded="false" />
+            <element signature="class#6985:7115" expanded="false" />
+            <element signature="e#12269#12278#0" expanded="true" />
             <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
             <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -1028,9 +919,11 @@
             <element signature="method#setSet#0;class#Main#0" expanded="false" />
             <element signature="method#saveFile#0;class#Main#0" expanded="false" />
             <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#16357#16365#0" expanded="true" />
+            <element signature="e#15758#15766#0" expanded="true" />
             <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="e#19278#19293#0" expanded="true" />
+            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+            <element signature="e#18679#18694#0" expanded="true" />
+            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
             <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -1059,10 +952,11 @@
             <element signature="method#drawLines#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawBlocks#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawExtras#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#drawHighlight#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawEntity#0;class#Drawspace#0" expanded="false" />
             <element signature="method#highlightAt#0;class#Drawspace#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseClicked#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#mouseMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseWheelMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#getPreferredSize#0;class#Drawspace#0" expanded="false" />
@@ -1098,17 +992,16 @@
           <caret line="185" column="16" lean-forward="false" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1422#0" expanded="true" />
+            <element signature="e#1407#1427#0" expanded="true" />
+            <element signature="class#1474:3109" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#3816:4355" expanded="false" />
-            <element signature="class#4391:4561" expanded="false" />
-            <element signature="class#4597:4856" expanded="false" />
-            <element signature="class#4894:5069" expanded="false" />
-            <element signature="class#5107:5260" expanded="false" />
-            <element signature="class#5302:5432" expanded="false" />
-            <element signature="class#6167:6525" expanded="false" />
-            <element signature="class#6567:9068" expanded="false" />
-            <element signature="e#12868#12877#0" expanded="true" />
+            <element signature="class#5501:6038" expanded="false" />
+            <element signature="class#6074:6244" expanded="false" />
+            <element signature="class#6280:6539" expanded="false" />
+            <element signature="class#6577:6752" expanded="false" />
+            <element signature="class#6790:6943" expanded="false" />
+            <element signature="class#6985:7115" expanded="false" />
+            <element signature="e#12269#12278#0" expanded="true" />
             <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
             <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -1116,9 +1009,11 @@
             <element signature="method#setSet#0;class#Main#0" expanded="false" />
             <element signature="method#saveFile#0;class#Main#0" expanded="false" />
             <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#16357#16365#0" expanded="true" />
+            <element signature="e#15758#15766#0" expanded="true" />
             <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="e#19278#19293#0" expanded="true" />
+            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+            <element signature="e#18679#18694#0" expanded="true" />
+            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
             <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -1147,10 +1042,11 @@
             <element signature="method#drawLines#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawBlocks#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawExtras#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#drawHighlight#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawEntity#0;class#Drawspace#0" expanded="false" />
             <element signature="method#highlightAt#0;class#Drawspace#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseClicked#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#mouseMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseWheelMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#getPreferredSize#0;class#Drawspace#0" expanded="false" />
@@ -1186,17 +1082,16 @@
           <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1422#0" expanded="true" />
+            <element signature="e#1407#1427#0" expanded="true" />
+            <element signature="class#1474:3109" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#3816:4355" expanded="false" />
-            <element signature="class#4391:4561" expanded="false" />
-            <element signature="class#4597:4856" expanded="false" />
-            <element signature="class#4894:5069" expanded="false" />
-            <element signature="class#5107:5260" expanded="false" />
-            <element signature="class#5302:5432" expanded="false" />
-            <element signature="class#6167:6525" expanded="false" />
-            <element signature="class#6567:9068" expanded="false" />
-            <element signature="e#12868#12877#0" expanded="true" />
+            <element signature="class#5501:6038" expanded="false" />
+            <element signature="class#6074:6244" expanded="false" />
+            <element signature="class#6280:6539" expanded="false" />
+            <element signature="class#6577:6752" expanded="false" />
+            <element signature="class#6790:6943" expanded="false" />
+            <element signature="class#6985:7115" expanded="false" />
+            <element signature="e#12269#12278#0" expanded="true" />
             <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
             <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -1204,9 +1099,11 @@
             <element signature="method#setSet#0;class#Main#0" expanded="false" />
             <element signature="method#saveFile#0;class#Main#0" expanded="false" />
             <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#16357#16365#0" expanded="true" />
+            <element signature="e#15758#15766#0" expanded="true" />
             <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="e#19278#19293#0" expanded="true" />
+            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+            <element signature="e#18679#18694#0" expanded="true" />
+            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
             <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -1245,13 +1142,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/DoorDialog.java" />
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/DoorDialog.form" />
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/AnimateBlock.form">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1266,13 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="91" column="16" lean-forward="false" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="176" column="23" lean-forward="true" selection-start-line="150" selection-start-column="8" selection-end-line="176" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1328,7 +1211,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="12" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1343,36 +1232,32 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="227" column="47" lean-forward="true" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
+        <state relative-caret-position="612">
+          <caret line="162" column="55" lean-forward="false" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
-            <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
-            <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
+            <element signature="method#InsertEntityDialog#0;class#InsertEntityDialog#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4602">
-          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        <state relative-caret-position="234">
+          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1422#0" expanded="true" />
+            <element signature="e#1407#1427#0" expanded="true" />
+            <element signature="class#1474:3109" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#3816:4355" expanded="false" />
-            <element signature="class#4391:4561" expanded="false" />
-            <element signature="class#4597:4856" expanded="false" />
-            <element signature="class#4894:5069" expanded="false" />
-            <element signature="class#5107:5260" expanded="false" />
-            <element signature="class#5302:5432" expanded="false" />
-            <element signature="class#6167:6525" expanded="false" />
-            <element signature="class#6567:9068" expanded="false" />
-            <element signature="e#12868#12877#0" expanded="true" />
+            <element signature="class#5501:6038" expanded="false" />
+            <element signature="class#6074:6244" expanded="false" />
+            <element signature="class#6280:6539" expanded="false" />
+            <element signature="class#6577:6752" expanded="false" />
+            <element signature="class#6790:6943" expanded="false" />
+            <element signature="class#6985:7115" expanded="false" />
+            <element signature="e#12269#12278#0" expanded="true" />
             <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
             <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
@@ -1380,18 +1265,43 @@
             <element signature="method#setSet#0;class#Main#0" expanded="false" />
             <element signature="method#saveFile#0;class#Main#0" expanded="false" />
             <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#16357#16365#0" expanded="true" />
+            <element signature="e#15758#15766#0" expanded="true" />
             <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="e#19278#19293#0" expanded="true" />
+            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
+            <element signature="e#18679#18694#0" expanded="true" />
+            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
             <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="143" column="22" lean-forward="false" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
+            <element signature="method#setValue#0;class#ExtraDialog#0" expanded="false" />
+            <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
+            <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
+            <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="397" column="32" lean-forward="false" selection-start-line="397" selection-start-column="32" selection-end-line="397" selection-end-column="32" />
+        <state relative-caret-position="261">
+          <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
           <folding>
             <element signature="method#loadLevel#0;class#Drawspace#0" expanded="false" />
             <element signature="method#saveLevel#0;class#Drawspace#0" expanded="false" />
@@ -1399,10 +1309,11 @@
             <element signature="method#drawLines#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawBlocks#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawExtras#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#drawHighlight#0;class#Drawspace#0" expanded="false" />
             <element signature="method#drawEntity#0;class#Drawspace#0" expanded="false" />
             <element signature="method#highlightAt#0;class#Drawspace#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseClicked#0;class#Drawspace#0" expanded="false" />
+            <element signature="method#mouseMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseDragged#0;class#Drawspace#0" expanded="false" />
             <element signature="method#mouseWheelMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#getPreferredSize#0;class#Drawspace#0" expanded="false" />

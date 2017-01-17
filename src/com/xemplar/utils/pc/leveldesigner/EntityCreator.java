@@ -77,9 +77,9 @@ public class EntityCreator {
 	public String getLevelID(){
 		String arg = "";
 		for(int i = 0; i < args.length; i++){
-			arg += vals[i] + (i < args.length - 1 ? "/" : "");
+			arg += vals[i] + (i < args.length - 1 ? "#" : "");
 		}
-		return "e" + format.format(id) + "/" + arg;
+		return "e" + format.format(id) + "#" + arg;
 	}
 	
 	public String toString(){

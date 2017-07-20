@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50b6baaa-853b-4162-888d-f8ae6b1cb683" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Drawspace.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/lojtest/TestServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/JStatusBar.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/JStatusBar.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$1.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$3.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main$3.class" />
@@ -20,10 +20,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main.class" afterPath="$PROJECT_DIR$/bin/com/xemplar/utils/pc/leveldesigner/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/JStatusBar.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/JStatusBar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java" afterPath="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java" />
     </list>
     <ignored path="LevelDesigner-NS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,42 +47,62 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+            <state relative-caret-position="1989">
+              <caret line="117" column="6" lean-forward="false" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1407#1427#0" expanded="true" />
-                <element signature="class#1474:3109" expanded="false" />
-                <element signature="method#main#0;class#Main#0" expanded="false" />
-                <element signature="class#5501:6038" expanded="false" />
-                <element signature="class#6074:6244" expanded="false" />
-                <element signature="class#6280:6539" expanded="false" />
-                <element signature="class#6577:6752" expanded="false" />
-                <element signature="class#6790:6943" expanded="false" />
-                <element signature="class#6985:7115" expanded="false" />
-                <element signature="e#12269#12278#0" expanded="true" />
-                <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-                <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-                <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-                <element signature="method#save#0;class#Main#0" expanded="false" />
-                <element signature="method#setSet#0;class#Main#0" expanded="false" />
-                <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-                <element signature="method#openFile#0;class#Main#0" expanded="false" />
-                <element signature="e#15758#15766#0" expanded="true" />
-                <element signature="method#download#0;class#Main#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-                <element signature="e#18679#18694#0" expanded="true" />
-                <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-                <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
+                <element signature="e#5773#5774#0" expanded="true" />
+                <element signature="e#5820#5821#0" expanded="true" />
+                <element signature="e#5880#5881#0" expanded="true" />
+                <element signature="e#5939#5940#0" expanded="true" />
+                <element signature="e#5991#5992#0" expanded="true" />
+                <element signature="e#6043#6044#0" expanded="true" />
+                <element signature="class#7317:8136" expanded="false" />
+                <element signature="class#8178:8423" expanded="false" />
+                <element signature="class#8465:8865" expanded="false" />
+                <element signature="class#8909:9159" expanded="false" />
+                <element signature="class#9203:9431" expanded="false" />
+                <element signature="class#9473:9603" expanded="false" />
+                <element signature="e#9546#9547#0" expanded="true" />
+                <element signature="e#9592#9593#0" expanded="true" />
+                <element signature="class#10312:10531" expanded="false" />
+                <element signature="e#23157#23158#0" expanded="true" />
+                <element signature="e#23216#23217#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Drawspace.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JStatusBar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/JStatusBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+              <folding>
+                <element signature="e#917#1186#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="method#setSelectedBlock#0;class#JStatusBar#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/lojtest/TestServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drawspace.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="1870">
               <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
               <folding>
                 <element signature="method#loadLevel#0;class#Drawspace#0" expanded="false" />
@@ -108,7 +128,7 @@
       <file leaf-file-name="InsertEntityDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="578">
               <caret line="162" column="55" lean-forward="false" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
               <folding>
                 <element signature="method#InsertEntityDialog#0;class#InsertEntityDialog#0" expanded="false" />
@@ -120,15 +140,13 @@
       <file leaf-file-name="ExtraDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="143" column="22" lean-forward="false" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="22" />
+            <state relative-caret-position="1649">
+              <caret line="113" column="61" lean-forward="false" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
-                <element signature="method#setValue#0;class#ExtraDialog#0" expanded="false" />
                 <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
                 <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
-                <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -137,7 +155,7 @@
       <file leaf-file-name="NewFileDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="578">
               <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
               <folding />
             </state>
@@ -179,7 +197,13 @@
       <find>setVi</find>
       <find>setEnab</find>
       <find>setOp</find>
+      <find>export</find>
+      <find />
+      <find>status</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -207,19 +231,22 @@
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JContextMenu.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/JProgressDialog.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Download.java" />
-        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/EntityCreator.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java" />
-        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
         <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/lojtest/TestServer.java" />
+        <option value="$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/JStatusBar.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1363" />
-    <option name="width" value="1372" />
-    <option name="height" value="771" />
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -264,9 +291,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,76 +304,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="leveldesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="leveldesigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dialogs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelDesigner-NS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,9 +316,21 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/res" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="318" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="105" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -578,6 +549,44 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -604,6 +613,25 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
       <method />
     </configuration>
     <list size="2">
@@ -641,6 +669,11 @@
       <method />
     </configuration>
   </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -658,38 +691,37 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1363" y="0" width="1372" height="771" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18358208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21961933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1810089" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21961933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988006" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264095" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -705,7 +737,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -714,55 +746,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/TileButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="54" column="60" lean-forward="false" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
-          <caret line="254" column="46" lean-forward="false" selection-start-line="254" selection-start-column="46" selection-end-line="254" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1407#1427#0" expanded="true" />
-            <element signature="class#1474:3109" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#5501:6038" expanded="false" />
-            <element signature="class#6074:6244" expanded="false" />
-            <element signature="class#6280:6539" expanded="false" />
-            <element signature="class#6577:6752" expanded="false" />
-            <element signature="class#6790:6943" expanded="false" />
-            <element signature="class#6985:7115" expanded="false" />
-            <element signature="e#12269#12278#0" expanded="true" />
-            <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-            <element signature="method#save#0;class#Main#0" expanded="false" />
-            <element signature="method#setSet#0;class#Main#0" expanded="false" />
-            <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-            <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#15758#15766#0" expanded="true" />
-            <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-            <element signature="e#18679#18694#0" expanded="true" />
-            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-            <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -770,10 +753,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
-            <element signature="method#setValue#0;class#ExtraDialog#0" expanded="false" />
             <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
             <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
-            <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,29 +792,23 @@
           <caret line="303" column="19" lean-forward="false" selection-start-line="303" selection-start-column="12" selection-end-line="303" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1407#1427#0" expanded="true" />
-            <element signature="class#1474:3109" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#5501:6038" expanded="false" />
-            <element signature="class#6074:6244" expanded="false" />
-            <element signature="class#6280:6539" expanded="false" />
-            <element signature="class#6577:6752" expanded="false" />
-            <element signature="class#6790:6943" expanded="false" />
-            <element signature="class#6985:7115" expanded="false" />
-            <element signature="e#12269#12278#0" expanded="true" />
-            <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-            <element signature="method#save#0;class#Main#0" expanded="false" />
-            <element signature="method#setSet#0;class#Main#0" expanded="false" />
-            <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-            <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#15758#15766#0" expanded="true" />
-            <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-            <element signature="e#18679#18694#0" expanded="true" />
-            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-            <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5820#5821#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6043#6044#0" expanded="true" />
+            <element signature="class#7317:8136" expanded="false" />
+            <element signature="class#8178:8423" expanded="false" />
+            <element signature="class#8465:8865" expanded="false" />
+            <element signature="class#8909:9159" expanded="false" />
+            <element signature="class#9203:9431" expanded="false" />
+            <element signature="class#9473:9603" expanded="false" />
+            <element signature="e#9546#9547#0" expanded="true" />
+            <element signature="e#9592#9593#0" expanded="true" />
+            <element signature="class#10312:10531" expanded="false" />
+            <element signature="e#23157#23158#0" expanded="true" />
+            <element signature="e#23216#23217#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,29 +877,23 @@
           <caret line="185" column="16" lean-forward="false" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1407#1427#0" expanded="true" />
-            <element signature="class#1474:3109" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#5501:6038" expanded="false" />
-            <element signature="class#6074:6244" expanded="false" />
-            <element signature="class#6280:6539" expanded="false" />
-            <element signature="class#6577:6752" expanded="false" />
-            <element signature="class#6790:6943" expanded="false" />
-            <element signature="class#6985:7115" expanded="false" />
-            <element signature="e#12269#12278#0" expanded="true" />
-            <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-            <element signature="method#save#0;class#Main#0" expanded="false" />
-            <element signature="method#setSet#0;class#Main#0" expanded="false" />
-            <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-            <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#15758#15766#0" expanded="true" />
-            <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-            <element signature="e#18679#18694#0" expanded="true" />
-            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-            <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5820#5821#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6043#6044#0" expanded="true" />
+            <element signature="class#7317:8136" expanded="false" />
+            <element signature="class#8178:8423" expanded="false" />
+            <element signature="class#8465:8865" expanded="false" />
+            <element signature="class#8909:9159" expanded="false" />
+            <element signature="class#9203:9431" expanded="false" />
+            <element signature="class#9473:9603" expanded="false" />
+            <element signature="e#9546#9547#0" expanded="true" />
+            <element signature="e#9592#9593#0" expanded="true" />
+            <element signature="class#10312:10531" expanded="false" />
+            <element signature="e#23157#23158#0" expanded="true" />
+            <element signature="e#23216#23217#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -992,29 +961,23 @@
           <caret line="185" column="16" lean-forward="false" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1407#1427#0" expanded="true" />
-            <element signature="class#1474:3109" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#5501:6038" expanded="false" />
-            <element signature="class#6074:6244" expanded="false" />
-            <element signature="class#6280:6539" expanded="false" />
-            <element signature="class#6577:6752" expanded="false" />
-            <element signature="class#6790:6943" expanded="false" />
-            <element signature="class#6985:7115" expanded="false" />
-            <element signature="e#12269#12278#0" expanded="true" />
-            <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-            <element signature="method#save#0;class#Main#0" expanded="false" />
-            <element signature="method#setSet#0;class#Main#0" expanded="false" />
-            <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-            <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#15758#15766#0" expanded="true" />
-            <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-            <element signature="e#18679#18694#0" expanded="true" />
-            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-            <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5820#5821#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6043#6044#0" expanded="true" />
+            <element signature="class#7317:8136" expanded="false" />
+            <element signature="class#8178:8423" expanded="false" />
+            <element signature="class#8465:8865" expanded="false" />
+            <element signature="class#8909:9159" expanded="false" />
+            <element signature="class#9203:9431" expanded="false" />
+            <element signature="class#9473:9603" expanded="false" />
+            <element signature="e#9546#9547#0" expanded="true" />
+            <element signature="e#9592#9593#0" expanded="true" />
+            <element signature="class#10312:10531" expanded="false" />
+            <element signature="e#23157#23158#0" expanded="true" />
+            <element signature="e#23216#23217#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1082,29 +1045,23 @@
           <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1407#1427#0" expanded="true" />
-            <element signature="class#1474:3109" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#5501:6038" expanded="false" />
-            <element signature="class#6074:6244" expanded="false" />
-            <element signature="class#6280:6539" expanded="false" />
-            <element signature="class#6577:6752" expanded="false" />
-            <element signature="class#6790:6943" expanded="false" />
-            <element signature="class#6985:7115" expanded="false" />
-            <element signature="e#12269#12278#0" expanded="true" />
-            <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-            <element signature="method#save#0;class#Main#0" expanded="false" />
-            <element signature="method#setSet#0;class#Main#0" expanded="false" />
-            <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-            <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#15758#15766#0" expanded="true" />
-            <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-            <element signature="e#18679#18694#0" expanded="true" />
-            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-            <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5820#5821#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6043#6044#0" expanded="true" />
+            <element signature="class#7317:8136" expanded="false" />
+            <element signature="class#8178:8423" expanded="false" />
+            <element signature="class#8465:8865" expanded="false" />
+            <element signature="class#8909:9159" expanded="false" />
+            <element signature="class#9203:9431" expanded="false" />
+            <element signature="class#9473:9603" expanded="false" />
+            <element signature="e#9546#9547#0" expanded="true" />
+            <element signature="e#9592#9593#0" expanded="true" />
+            <element signature="class#10312:10531" expanded="false" />
+            <element signature="e#23157#23158#0" expanded="true" />
+            <element signature="e#23216#23217#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1166,13 +1123,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/jdk1.8/src.zip!/javax/swing/event/ListSelectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/javax/swing/event/ListSelectionListener.java" />
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/TileButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="846">
@@ -1221,6 +1172,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="162" column="55" lean-forward="false" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
+          <folding>
+            <element signature="method#InsertEntityDialog#0;class#InsertEntityDialog#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.form">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1232,75 +1193,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/InsertEntityDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="162" column="55" lean-forward="false" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
-          <folding>
-            <element signature="method#InsertEntityDialog#0;class#InsertEntityDialog#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1407#1427#0" expanded="true" />
-            <element signature="class#1474:3109" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#5501:6038" expanded="false" />
-            <element signature="class#6074:6244" expanded="false" />
-            <element signature="class#6280:6539" expanded="false" />
-            <element signature="class#6577:6752" expanded="false" />
-            <element signature="class#6790:6943" expanded="false" />
-            <element signature="class#6985:7115" expanded="false" />
-            <element signature="e#12269#12278#0" expanded="true" />
-            <element signature="method#checkUpdate#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Main#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Main#0" expanded="false" />
-            <element signature="method#save#0;class#Main#0" expanded="false" />
-            <element signature="method#setSet#0;class#Main#0" expanded="false" />
-            <element signature="method#saveFile#0;class#Main#0" expanded="false" />
-            <element signature="method#openFile#0;class#Main#0" expanded="false" />
-            <element signature="e#15758#15766#0" expanded="true" />
-            <element signature="method#download#0;class#Main#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Main#0" expanded="false" />
-            <element signature="e#18679#18694#0" expanded="true" />
-            <element signature="method#makeTool#0;class#Main#0" expanded="false" />
-            <element signature="method#makeLayer#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="143" column="22" lean-forward="false" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
-            <element signature="method#setValue#0;class#ExtraDialog#0" expanded="false" />
-            <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
-            <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
-            <element signature="class#BlockModel#0;class#ExtraDialog#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Drawspace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="1870">
           <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
           <folding>
             <element signature="method#loadLevel#0;class#Drawspace#0" expanded="false" />
@@ -1318,6 +1213,84 @@
             <element signature="method#mouseWheelMoved#0;class#Drawspace#0" expanded="false" />
             <element signature="method#getPreferredSize#0;class#Drawspace#0" expanded="false" />
             <element signature="method#resizeField#0;class#Drawspace#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="117" column="6" lean-forward="false" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5820#5821#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6043#6044#0" expanded="true" />
+            <element signature="class#7317:8136" expanded="false" />
+            <element signature="class#8178:8423" expanded="false" />
+            <element signature="class#8465:8865" expanded="false" />
+            <element signature="class#8909:9159" expanded="false" />
+            <element signature="class#9203:9431" expanded="false" />
+            <element signature="class#9473:9603" expanded="false" />
+            <element signature="e#9546#9547#0" expanded="true" />
+            <element signature="e#9592#9593#0" expanded="true" />
+            <element signature="class#10312:10531" expanded="false" />
+            <element signature="e#23157#23158#0" expanded="true" />
+            <element signature="e#23216#23217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/lojtest/TestServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/NewFileDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/dialogs/ExtraDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="113" column="61" lean-forward="false" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCancel#0;class#ExtraDialog#0" expanded="false" />
+            <element signature="initializer##0;class#ExtraDialog#0" expanded="false" />
+            <element signature="class#Swatch#0;class#ExtraDialog#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xemplar/utils/pc/leveldesigner/JStatusBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#917#1186#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="method#setSelectedBlock#0;class#JStatusBar#0" expanded="false" />
           </folding>
         </state>
       </provider>

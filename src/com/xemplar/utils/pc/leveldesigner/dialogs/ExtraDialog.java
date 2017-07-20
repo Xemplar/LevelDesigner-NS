@@ -29,6 +29,8 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
     private JSpinner xDest;
     private JSpinner yDest;
     private JButton selectDest;
+    private JButton delSwatch;
+    private JCheckBox optReturn;
 
     private int eX, eY;
     private String prev;
@@ -109,6 +111,7 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
             case 4:
                 params.put("dx", xDest.getValue());
                 params.put("dy", yDest.getValue());
+                params.put("return", optReturn.isSelected());
                 break;
         }
 
@@ -138,6 +141,8 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
             Drawspace.COMMAND = "dest";
             this.setOpacity(0.3F);
             AWTUtilities.setWindowOpaque(this, false);
+        } else if(name.contains("delSwatch")){
+            ((BlockModel)swatches.getModel()).removeSwatch(swatches.getSelectedIndex());
         } else if(name.contains("swatch")){
             Drawspace.SELECT = true;
             Drawspace.COMMAND = "swatch";
@@ -228,6 +233,7 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
         model = new BlockModel();
         swatches = new JList<>();
         swatches.setModel(model);
+        optReturn = new JCheckBox("Add Return");
 
         extras = new JList<>();
         extras.addListSelectionListener(this);
@@ -250,10 +256,12 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
         selectPos  = new JButton("Select Position");
         selectDest = new JButton("Select Destination");
         addSwatch  = new JButton("Add Swatch");
+        delSwatch  = new JButton("Delete Swatch");
 
         selectPos.addActionListener(this);
         selectDest.addActionListener(this);
         addSwatch.addActionListener(this);
+        delSwatch.addActionListener(this);
 
         this.setMaximumSize(new Dimension(600, 300));
         this.setMinimumSize(new Dimension(600, 300));
@@ -366,7 +374,16 @@ public class ExtraDialog extends JDialog implements ListSelectionListener, Actio
 
         public void addSwatch(Swatch s){
             this.swatches.add(s);
-            System.out.println("Size: " + swatches.size());
+            update();
+        }
+
+        public void removeSwatch(Swatch s){
+            this.swatches.remove(s);
+            update();
+        }
+
+        public void removeSwatch(int i){
+            this.swatches.remove(i);
             update();
         }
 
